@@ -12,16 +12,20 @@ body {
 }
 
 #contenedor{
+    border: 1px solid black;
     background-color: #999;
 }
 
 #header{
     float: left;
+    border: 1px solid black;
     text-align: center;
     background: #FFF;
     margin: 10px; 
-    width: 940px;
+    width: 98%;
     height: 50px;
+    overflow: hidden;
+    padding-top: 10px;
 }
 
 nav{
@@ -29,22 +33,24 @@ nav{
 }
 
 nav ul{
-    list-style: none;    
+    list-style: none;  
+ 
 }
 
-nav ul li{
-    
+nav ul li{    
     float: left;
     width: 12%;
     height: 7%;
     text-align: center;
-    margin-left: 19px;
+    margin-left: 10px;
+    margin-right: 11px;
+    overflow: hidden;
 }
 
 nav ul li a{    
     display: block;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     font-weight: bold;
     color: black;
     background: white;
@@ -53,64 +59,44 @@ nav ul li a{
 }
 nav ul li a:hover{
     background-color:#999; 
-    color: white;   
+    color: white;  
+    border: 2px solid black; 
 }
 
 #section {
-    margin-right: 10px;
-    width: 69%;
-    height: 600px;
-    background: #999;
     float: left;
-    margin-top: 10px; 
-    margin-bottom: 10px;   
     border: 1px solid black;
-}
-
-.section {
-    display: block;
-    margin: 10px;
-    width: 620px;
-    height: 560px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 3px;
+    width: 64%;
+    height: 75%;
     background: #FFF;
     padding: 10px;
 }
 
-
 #aside {
-    width: 29%;
-    height: 600px;
-    background: #999;
     float: right;
-    margin-top: 10px; 
-    margin-bottom: 10px;   
     border: 1px solid black;
-}
-
-.aside{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 30%;
+    height: 78%; 
     text-align: center;
     background: #FFF;
-    margin: 10px;
-    height: 580px;
 }
 
 #footer {
     clear: both;
-    width: 100%;
-    height: 70px;
-    background: #999;
-    position: relative;
-    margin-top: 10px;
-    text-align: center;
     border: 1px solid black;
-}
-
-.footer{
+    width: 96%;
+    height: 5%;
     text-align: center;
     background: #FFF;
-    margin: 10px; 
-    width: 920px;
-    height: 30px;
-    position:absolute;
+    margin: 10px;
+    text-align: center;
     padding: 10px;
 }
