@@ -1,0 +1,34 @@
+body{
+        width:1020px;
+        height: auto;
+        border: 3px solid pink;
+        background: lightgoldenrodyellow;
+        font-family: Cambria;
+        font-size: 20px;
+        }
+
+    h2{
+        text-align: center;
+        font-family: Cambria;
+        }
+
+    .div_inline_block{
+            display: inline-block;
+	        margin: 10px;           
+            text-align: left;
+        }
+        .div_inline_block1{
+            display: inline-block;
+            
+	        margin: 20px;            
+        }
+
+    .div_inline_block2{
+        display: inline-block;
+	    margin: 20px;        	    
+        }
+
+    label{
+        margin: 10px;
+    }
+    
