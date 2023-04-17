@@ -197,8 +197,9 @@ aside {
     #footer{
         width: 91%;
     }
-
 } 
+
+/* A continuación insertamos las media querys para hacer la web responsive design: */
 
 @media screen and (max-width: 360px) and (orientation:landscape){ 
     body{
