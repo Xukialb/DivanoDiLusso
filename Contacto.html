@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="C:\Users\anabe\Git\WorkspaceGit\LMSG_AE-1\css\Contacto.css">
     <title>Contacto</title>
+</head>
 
 <body>
 
     <nav>
-        <div class="div_inline_block3"><a href="html\index.html">HOME</a></div>
-        <div class="div_inline_block3"><a href="html\quienes.html">QUIENES SOMOS</a></div>
-        <div class="div_inline_block3"><a href="html\servicios.html">SERVICIOS</a></div>
-        <div class="div_inline_block3"><a href="html\Contacto.html">CONTACTO</a></div>
-        <div class="div_inline_block3"><a>NOVEDADES</a></div>
-        <div class="div_inline_block3"><a>DISEÑO</a></div>
+        <div class="div_inline_block"><a href="index.html">HOME</a></div>
+        <div class="div_inline_block"><a href="quienes.html">QUIENES SOMOS</a></div>
+        <div class="div_inline_block"><a href="servicios.html">SERVICIOS</a></div>
+        <div class="div_inline_block"><a href="Contacto.html">CONTACTO</a></div>
+        <div class="div_inline_block"><a>NOVEDADES</a></div>
+        <div class="div_inline_block"><a>DISEÑO</a></div>
 
     </nav>
 
@@ -27,21 +28,28 @@
     <!--etiqueta de texto-->
     <legend>Datos personales:</legend>
 
+<div>
+<th>
     <!--autofocus posiciona el cursor en "nombre" y required se utiliza para campos obligatorios-->    
-    <label class="div_inline_block" for="nombre"> Nombre: </label>
-    <input  id="nombre" type="text" name="nombre" autofocus/>
+<tr><label for="nombre"> Nombre: </label>
+    <input id="nombre" type="text" name="nombre" autofocus/></tr>
    
-    <label class="div_inline_block" for="apellidos"> Apellidos: </label>
-     <input  id="apellidos" type="text" name="apellidos" required/>
+    <tr><label for="apellidos"> Apellidos: </label>
+     <input  id="apellidos" type="text" name="apellidos" required/></tr>
 
-    <label class="div_inline_block" for="DNI/NIE/NIF"> DNI/NIE/NIF: </label>     
-    <input id="DNI/NIF" type="text" name="DNI/NIF" required/></br><br />
+    <tr><label for="DNI/NIE/NIF"> DNI/NIE/NIF: </label>     
+    <input  id="DNI/NIF" type="text" name="DNI/NIF" required/></tr>
+</th></br></br></br>
+
+</div>
 
     <!--uso date para que se despliegue un calendario-->
-    <label class="div_inline_block1" for="date"> Fecha de nacimiento: </label>
-    <input type="date" type="text" name="date" required/>
+<div> 
+<th>
+    <tr><label  for="date"> Fecha de nacimiento: </label>
+    <input type="date" type="text" name="date" required/></tr>
 
-    <label  class="div_inline_block1" for="nacionalidad"> Nacionalidad: </label> 
+    <tr><label  for="nacionalidad"> Nacionalidad: </label> 
     <select name="nacionalidad">
         <option value="  "></option>
         <option value="FAfganistán">Afganistán</option>
@@ -227,34 +235,44 @@
         <option value="Zambia">Zambia</option>
         <option value="Zimbagüe">Zimbagüe</option>
          
-    </select></br></br>
+    </select>
+   
+     <!--type=tel solo admite números telefónicos-->
+     <tr><label type= "tel" for="teléfono" > Teléfono: </label>
+     <input type="teléfono" type="text" name="teléfono" required/></tr>
 
-      
+    </th>
+</div>
+</br></br></br>
+    
     <label  for="domicilio"> Domicilio (calle, número, acceso, piso, apartamento, puerta): </label> </br>
-    <input id="domicilio" type="text" name="domicilio" size="80px" required/></br></br>
+    <input class= "campo" id="domicilio" type="text" name="domicilio" size="0px" required/></br></br>
 
-    <label class="div_inline_block2" for="ciudad" > Cuidad: </label>
-    <input type="ciudad" type="text" name="ciudad">
+<div>
+<th>
+    <tr><label for="ciudad" > Cuidad: </label>
+    <input type="ciudad" type="text" name="ciudad"></tr>
 
-    <label class="div_inline_block2" for="provincia" > Provincia: </label>
-    <input type="provincia" type="text" name="provincia" size="22px">
+    <tr><label for="provincia" > Provincia: </label>
+    <input type="provincia" type="text" name="provincia" size="22px"></tr>
 
-    <label class="div_inline_block2" for="cip" > CIP: </label>
-    <input type="cip" type="text" name="cip" size="20px" required/><br /><br />
+    <tr><label for="cip" > CIP: </label>
+    <input type="cip" type="text" name="cip" size="20px" required/></tr>
 
-    <!--type=tel solo admite números telefónicos-->
-    <label type= "tel" class="div_inline_block2" for="teléfono" > Teléfono: </label>
-    <input type="teléfono" type="text" name="teléfono" required/>
+</th>
+</div>
+
+<br /><br />
 
     <!--type email solo admite correo electrónico-->
-    <label type= "email" class="div_inline_block2" for="email"> Email: </label>
+    <label type= "email"  for="email"> Email: </label>
     <input type="email" type="text" name="email" size="60px" required/><br /><br />
 
 </fieldset></br>
 
 <fieldset>
     <label for="mensaje">¿En qué podemos ayudarte?</label></br>
-    <textarea style="resize: none;" rows="5" cols="120" name="mensaje"></textarea>
+    <textarea class="campo" style="resize: none"></textarea>
 
 </fieldset>
 
@@ -264,14 +282,21 @@
 </form>
     
 <footer>
-    <div class="div_inline_block5"><img class= "peq" src="C:\Users\anabe\OneDrive\Imágenes\Capturas de pantalla\telegram.png"></div>
-    <div class="div_inline_block5"><img class= "peq" src="C:\Users\anabe\OneDrive\Imágenes\Capturas de pantalla\instagram.png"></div>
-    <div class="div_inline_block5"><img class= "peq" src="C:\Users\anabe\OneDrive\Imágenes\Capturas de pantalla\twitter.png"></div>
+<div>
+<th>
+    <tr><img class= "peq" src="C:\Users\anabe\OneDrive\Imágenes\Capturas de pantalla\telegram.png"></tr>
+        <tr><img class= "peq" src="C:\Users\anabe\OneDrive\Imágenes\Capturas de pantalla\instagram.png"></tr>
+        <tr><img class= "peq" src="C:\Users\anabe\OneDrive\Imágenes\Capturas de pantalla\twitter.png"></tr>
+        <tr> <img class= "peq" src="C:\Users\anabe\OneDrive\Imágenes\Capturas de pantalla\youtube.png"></tr>
+    
+    
+</th></div>
+
 </br>
 
-    <div class="div_inline_block4">Aviso legal</div>
-    <div class="div_inline_block4">Política de privacidad</div>
-    <div class="div_inline_block4">Política de cookies</div>
+    <div class="div_inline_block1"><a class="a" href="legal.html">Aviso legal</a></div>
+    <div class="div_inline_block1"><a class="a" href="privacidad.html">Política de privacidad</a></div>
+    <div class="div_inline_block1"><a class="a" href="cookies.html">Política de cookies</a></div>
 
 </footer>
 </body>
