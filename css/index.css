@@ -43,11 +43,11 @@ body {
 
 .logo{
 
-    margin-right: 100px;
+    margin-right: 300px;
 }
 
 .marca{
-    margin-right: 50px;
+    margin-right: 150px;
 }
 
 #menu-navegacion{
@@ -65,7 +65,7 @@ nav ul li{
     width: 12%;
     height: 7%;
     text-align: center;
-    margin-right: 25px; 
+    margin-right: 31px; 
     margin-bottom: 10px;
 }
 
@@ -95,6 +95,13 @@ nav ul li a:hover{
     height: 800px;
     margin-top: 50px;
     margin-bottom: 10px;
+
+}
+
+.slogan{
+    text-align: center;
+    padding-top: 120px;
+    font-size: 30px;
 }
 
 section {
@@ -109,6 +116,21 @@ section {
     padding: 10px;  
     justify-content: center;
     align-items: center;
+    background-color: #fcfaf6;
+}
+
+.header{
+    padding-bottom: 20px;
+}
+
+.descripcion{
+    text-align: justify;
+    padding: 40px;
+    font-size: 18px;
+}
+
+.footer{
+    padding-top: 20px;
 }
 
 
