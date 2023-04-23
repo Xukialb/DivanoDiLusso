@@ -8,8 +8,8 @@
 </head>
 
 <body>
-
-    <nav>
+    <div id="contenedor">
+       <nav>
         <div class="div_inline_block"><a href="index.html">HOME</a></div>
         <div class="div_inline_block"><a href="quienes.html">QUIENES SOMOS</a></div>
         <div class="div_inline_block"><a href="servicios.html">SERVICIOS</a></div>
@@ -17,40 +17,34 @@
         <div class="div_inline_block"><a>NOVEDADES</a></div>
         <div class="div_inline_block"><a>DISEÑO</a></div>
 
-    </nav>
+       </nav>
 
-<h2> Formulario de contacto</h2>
+    <div id="form">
+        <h2> Formulario de contacto</h2>
 
-<form action="procesarPeticion.jsp" method="post"></form>
+        <form action="procesarPeticion.jsp" method="post"></form>
 
 <!--marco visible que encierra los datos del formulario.-->
 <fieldset>
     <!--etiqueta de texto-->
     <legend>Datos personales:</legend>
 
-<div>
-<th>
     <!--autofocus posiciona el cursor en "nombre" y required se utiliza para campos obligatorios-->    
-<tr><label for="nombre"> Nombre: </label>
-    <input id="nombre" type="text" name="nombre" autofocus/></tr>
+    <label for="nombre"> Nombre: </label>
+    <input class="campo" id="nombre" type="text" name="nombre" autofocus/></br>
    
-    <tr><label for="apellidos"> Apellidos: </label>
-     <input  id="apellidos" type="text" name="apellidos" required/></tr>
+    <label for="apellidos"> Apellidos: </label>
+     <input  class="campo" id="apellidos" type="text" name="apellidos" required/></br>
 
-    <tr><label for="DNI/NIE/NIF"> DNI/NIE/NIF: </label>     
-    <input  id="DNI/NIF" type="text" name="DNI/NIF" required/></tr>
-</th></br></br></br>
-
-</div>
+   <label for="DNI/NIE/NIF"> DNI/NIE/NIF: </label>     
+    <input class="campo"  id="DNI/NIF" type="text" name="DNI/NIF" placeholder="En caso de NIE, debes omitir las letras" required/></br>
 
     <!--uso date para que se despliegue un calendario-->
-<div> 
-<th>
-    <tr><label  for="date"> Fecha de nacimiento: </label>
-    <input type="date" type="text" name="date" required/></tr>
+    <label  for="date"> Fecha de nacimiento: </label>
+    <input class="campo" type="date" type="text" name="date" required/></br>
 
-    <tr><label  for="nacionalidad"> Nacionalidad: </label> 
-    <select name="nacionalidad">
+    <label  for="nacionalidad"> Nacionalidad: </label> 
+    <select name="nacionalidad" class="campo">
         <option value="  "></option>
         <option value="FAfganistán">Afganistán</option>
         <option value="Albania">Albania</option>
@@ -235,44 +229,32 @@
         <option value="Zambia">Zambia</option>
         <option value="Zimbagüe">Zimbagüe</option>
          
-    </select>
+    </select></br>
    
      <!--type=tel solo admite números telefónicos-->
-     <tr><label type= "tel" for="teléfono" > Teléfono: </label>
-     <input type="teléfono" type="text" name="teléfono" required/></tr>
+    <label type= "tel" for="teléfono" > Teléfono: </label>
+     <input class="campo" type="teléfono" type="text" name="teléfono" placeholder="Indica característica y número telefónico" required/></br>
 
-    </th>
-</div>
-</br></br></br>
-    
-    <label  for="domicilio"> Domicilio (calle, número, acceso, piso, apartamento, puerta): </label> </br>
-    <input class= "campo" id="domicilio" type="text" name="domicilio" size="0px" required/></br></br>
+      
+    <label for="ciudad" > Cuidad: </label>
+    <input class="campo" type="ciudad" type="text" name="ciudad"></br>
 
-<div>
-<th>
-    <tr><label for="ciudad" > Cuidad: </label>
-    <input type="ciudad" type="text" name="ciudad"></tr>
+    <label for="provincia" > Provincia: </label>
+    <input class="campo" type="provincia" type="text" name="provincia" size="22px"></br>
 
-    <tr><label for="provincia" > Provincia: </label>
-    <input type="provincia" type="text" name="provincia" size="22px"></tr>
-
-    <tr><label for="cip" > CIP: </label>
-    <input type="cip" type="text" name="cip" size="20px" required/></tr>
-
-</th>
-</div>
-
-<br /><br />
+   <label for="cip" > CIP: </label>
+    <input class="campo" type="cip" type="text" name="cip" size="20px" required/><br />
 
     <!--type email solo admite correo electrónico-->
     <label type= "email"  for="email"> Email: </label>
-    <input class="campo" type="email" type="text" name="email" size="60px" required/><br /><br />
+    <input class="campo" type="email" type="text" name="email" required/><br />
 
+</div>
 </fieldset></br>
 
 <fieldset>
     <label for="mensaje">¿En qué podemos ayudarte?</label></br>
-    <textarea class="campo" style="resize: none"></textarea>
+    <textarea class="campo" style="resize: none" placeholder="Escribe un breve mensaje"></textarea>
 
 </fieldset>
 
@@ -294,11 +276,12 @@
 
 </br>
 
-    <div class="div_inline_block1"><a class="a" href="legal.html">Aviso legal</a></div>
-    <div class="div_inline_block1"><a class="a" href="privacidad.html">Política de privacidad</a></div>
-    <div class="div_inline_block1"><a class="a" href="cookies.html">Política de cookies</a></div>
+    <div class="div_inline_block"><a class="a" href="legal.html">Aviso legal</a></div>
+    <div class="div_inline_block"><a class="a" href="privacidad.html">Política de privacidad</a></div>
+    <div class="div_inline_block"><a class="a" href="cookies.html">Política de cookies</a></div>
 
 </footer>
+</div>
 </body>
 
 </html>
