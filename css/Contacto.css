@@ -1,14 +1,10 @@
 
 body{
-    width: auto;
-    height: auto;
+    margin: 10px;
+    padding: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     font-size: 20px;
-    margin:5px;
-    padding: 70px;
-    background-color: #fcfaf6;
-    border: solid #867e66;
     }
 
 h2{
@@ -16,19 +12,27 @@ h2{
     font-style: italic;
     }
 
+#contenedor{
+    width: 50%;
+    margin:auto;
+    padding: 20px;
+    border: solid #867e66;
+}
+
 label{
-    margin: 10px;
-    margin-left: 30px;
+width: 100px;
+margin-top: 10px;
 }
 
 .div_inline_block{
     display: inline-block;
+    justify-content: center;
     background-color: #867e66;
     padding-top: 25px;
-    width: 160px;
+    width: 140px;
     height: 40px;
     text-align: center;
-     margin: 5px;
+    margin: 5px;
     }
 
 a{
@@ -41,25 +45,20 @@ a{
 }
 
 nav{
-    width: auto;
+    width: 500px;
     height:auto;
-    margin-left: 40px;
-    }
-
-.div_inline_block1{
-    display: inline-block;
-    margin-right: 70px;
-    margin-left: 80px;
+    margin-left: auto;
+    margin-right: auto;
     }
 
 footer {
-     width: auto;
-     height: auto;
-     border:solid #867e66;
-     margin: 20px;
-     clear:both;
-     font-size: 15;
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;      
+    width: 500px;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+         
      }
 
     img.peq{
@@ -69,12 +68,39 @@ footer {
 
 .campo{
     width: 100%;
+    margin-bottom: 20px;
+}
+
+textarea{
+    height: 50px;
+}
+
+input[type="submit"]{
+    background-color: #867e66;
+    color: #fcfaf6;
 }
 
 /**Diseño responsivo**/
 
-@media screen and (max-widht: 1150px) {
-    nav{width: 50%;}
-    footer{width: 50%;}
+@media screen and (min-width: 701px)and (max-width: 1024px){
+    width: 50%;
+    margin: 10px;
+    }
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+
+    nav{
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer{
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
 }
+
+
