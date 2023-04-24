@@ -82,11 +82,13 @@ nav ul li a{
     align-items: center;
     display: flex; 
 }
+
 nav ul li a:hover{
     background-color:#fcfaf6; 
     color: #867e66;  
     border: 2px solid #867e66;
 }
+
 .hero {
     background-image: url(../img/alberto/img-02.jpg);
     background-repeat: no-repeat;
@@ -95,7 +97,6 @@ nav ul li a:hover{
     height: 800px;
     margin-top: 50px;
     margin-bottom: 10px;
-
 }
 
 .slogan{
@@ -132,7 +133,6 @@ section {
 .footer{
     padding-top: 20px;
 }
-
 
 aside {
     float:right;
@@ -226,7 +226,7 @@ aside {
 
 @media screen and (max-width: 1300px){
     body{
-        width: 98%;
+        width: auto;
     }
 }
 
