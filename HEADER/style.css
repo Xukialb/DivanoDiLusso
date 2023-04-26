@@ -173,6 +173,77 @@ nav a:hover {
 }
 
 
+/*SUBMENU FIJOS*/
+/* Menú con los tipos de productos*/
+.submenu-fijos{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    border-radius:8px;
+    width:50%;
+    text-align:center;
+    padding-right:25px;
+    margin-left:250px;
+    margin-top: -50px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.55s;
+}
+
+
+.submenu-fijos li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.submenu-productos li:hover .submenu-fijos{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+
+/*SUBMENU DESLIZANTES*/
+/* Menú con los tipos de productos*/
+.submenu-deslizantes{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    border-radius:8px;
+    width:50%;
+    text-align:center;
+    padding-right:25px;
+    margin-left:250px;
+    margin-top: -50px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.55s;
+}
+
+
+.submenu-deslizantes li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.submenu-productos li:hover .submenu-deslizantes{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
 
 
 
