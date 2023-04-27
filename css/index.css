@@ -9,7 +9,7 @@ body{
 }
 
 /*HEADER CON LA IMAGEN DE FONDO*/
-header{
+#header-principal{
     background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
     url("../HEADER/otro.jpg");
     background-size:cover;
@@ -260,11 +260,43 @@ nav a:hover {
 
 section{
     float: left;
-    padding-top:10px;
-
     width:80%; 
     border: solid 1px black;
+
 }
+
+section header{
+    text-align: center;
+}
+
+article{
+    text-align: justify;
+}
+
+.sec1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    padding: 20px;
+}
+
+section img{
+    padding: 20px;
+}
+
+.img-art1{
+    float: left;
+    margin: 10px;
+}
+
+.img-art2{
+    float:right;
+}
+
+.footer-sec1{
+    text-align: center;
+}
+
+
 
 aside{
     float:right;
@@ -276,7 +308,7 @@ aside{
 
 
 
-footer{
+#footer-principal{
     display:flex;
     color:white;
     background-color:black;
@@ -326,7 +358,7 @@ footer a{
     display:flex;
     text-align:left;
     align-items:center;
-
+    margin-bottom: 10px;
     height:30px;
    
 }
@@ -336,9 +368,11 @@ footer a{
 }
 
 .contactofooter p{
-    padding-left:5px;  
+    padding:20px;    
     
 }
+
+
 
 .menufooter{
     display:flex;
@@ -346,9 +380,11 @@ footer a{
     
     height:180px;
     align-items:center;
-    justify-content:center;
+    justify-content:center;    
+}
 
-    
+.menufooter a{
+    margin-right: 40px;
 }
 
 .tablamenu{
