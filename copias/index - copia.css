@@ -1,0 +1,356 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right:auto;
+    margin-left: auto;
+    width: 75%;
+    background-color: #fcfaf6;
+    border: solid #867e66;
+    font-style: italic;
+    color: #867e66;
+}
+
+#contenedor-general{
+    background-color: #fcfaf6;
+}
+
+#header-principal{
+    background-color: #867e66;
+    color: #fcfaf6;
+    font-size: 40px;
+    border: 1px solid #867e66;;
+    text-align: center;
+    margin: 10px; 
+    width: 98%;
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.logo{
+
+    margin-right: 300px;
+}
+
+.marca{
+    margin-right: 150px;
+}
+
+#menu-navegacion{
+    width: 100%; 
+    margin: 10px;  
+    padding: 5px;
+}
+
+nav ul{
+    list-style: none;     
+ }
+
+nav ul li{    
+    float: left;
+    width: 12%;
+    height: 7%;
+    text-align: center;
+    margin-right: 31px; 
+    margin-bottom: 10px;
+}
+
+nav ul li a{    
+    display: block;
+    font-size: 18px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-weight: bold;
+    color: #fcfaf6;
+    background-color: #867e66;
+    height: 35px; 
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+}
+
+nav ul li a:hover{
+    background-color:#fcfaf6; 
+    color: #867e66;  
+    border: 2px solid #867e66;
+}
+
+.hero {
+    background-image: url(../img/alberto/img-02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 800px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.slogan{
+    text-align: center;
+    padding-top: 120px;
+    font-size: 30px;
+}
+
+section {
+    float: left;
+    border: 1px solid #867e66;
+    margin-right: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 69%;
+    height: 810px;
+    background: #FFF;
+    padding: 10px;  
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfaf6;
+}
+
+.header{
+    padding-bottom: 20px;
+}
+
+.descripcion{
+    text-align: justify;
+    padding: 40px;
+    font-size: 18px;
+}
+
+.footer{
+    padding-top: 20px;
+}
+
+aside {
+    float:right;
+    border: 1px solid #867e66;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 28%;
+    height: 810px; 
+    text-align: center;
+    background: #FFF;
+}
+
+.jadore{
+    margin-top: 5px;
+}
+
+#footer-principal {
+    clear: both;
+    border: 1px solid #867e66;
+    width: 98%;
+    height: 250px;
+    text-align: center;
+    background: #FFF;
+    margin: 10px;
+    padding: 10px;
+    background-color: #867e66;
+    color: #fcfaf6;
+}
+
+.redes-sociales{
+    margin-top: 10px;
+    float: left;
+    width: 350px;
+
+}
+
+.redes-sociales nav{
+    display: flex;
+}
+
+.redes-sociales nav a{   
+
+    width: 60px;    
+    margin: 10px;
+}
+
+.aviso-legal{
+    margin-top: 10px;
+    margin-left: 30px;
+    display: inline-block;
+    width: 200px;
+
+    margin-right: 130px;
+}
+
+.garantia{
+    margin-top: 10px;
+    display: inline-block;
+    width: 200px;
+
+}
+
+.soporte{
+    margin-top: 10px;
+    margin-left: 20px;
+    float: right;
+    width: 200px;
+
+}
+
+.copyright{
+    clear:both;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#footer-principal a{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    color: #fcfaf6;
+}
+
+/** A continuación insertamos las media querys para hacer la web responsive design: **/
+
+@media screen and (max-width: 1300px){
+    body{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 700px) and (orientation:landscape){
+    body{
+        width: 70%;
+    }
+
+    #header{
+        width: 95%;
+    }
+
+    nav ul li{
+        float:none;
+        width: 25%;
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    section{
+        float:none;
+        width: 91%;
+        margin-left: 10px;
+    }
+
+    aside{
+        float:none;
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    #footer{
+        width: 91%;
+    }
+} 
+
+@media screen and (max-width: 700px) and (orientation:portrait){
+    body{
+        width: 70%;
+    }
+
+    #header{
+        width: 95%;
+    }
+
+    nav ul li{
+        float:none;
+        width: 28%;
+        display: inline-block;
+    }
+
+    section{
+        float:none;
+        width: 91%;
+        margin-left: 10px;
+    }
+
+    aside{
+        float:none;
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    #footer{
+        width: 91%;
+    }
+} 
+
+@media screen and (max-width: 360px) and (orientation:landscape){ 
+    body{
+        width: 50%;
+    }
+
+    #header{
+        width: 90%;
+    }
+
+    nav ul li{
+        float:none;
+        width: 90%;
+    }
+
+    section{
+        float:none;
+        width: 76%;
+        margin-left: 10px;
+    }
+
+    aside{
+        float:none;
+        width: 88%;
+        margin-left: 10px;
+    }
+
+    #footer{
+        width: 75%;
+    }
+} 
+
+@media screen and (max-width: 360px) and (orientation:portrait){ 
+    body{
+        width: 50%;
+    }
+
+    #header{
+        width: 90%;
+    }
+
+    nav ul li{
+        float:none;
+        width: 90%;
+    }
+
+    section{
+        float:none;
+        width: 76%;
+        margin-left: 10px;
+    }
+
+    aside{
+        float:none;
+        width: 88%;
+        margin-left: 10px;
+    }  
+} 
