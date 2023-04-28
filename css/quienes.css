@@ -14,7 +14,8 @@ body {
 }
 header{
     background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
-    url("otro.jpg");
+    url("../C:\divanodilusso\DivanoDiLusso\HEADER\otro.jpg");
+    
     background-size:cover;
 
     display:flex;
