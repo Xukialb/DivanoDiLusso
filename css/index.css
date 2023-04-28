@@ -279,10 +279,12 @@ article{
     padding: 20px;
 }
 
-section img{
-    padding-left: 20px;
-    padding-right: 20px;
-    
+.sofa1{
+    margin-right: 10px;
+}
+
+.sofa2{
+    margin-left: 20px;
 }
 
 .img-art1{
@@ -305,6 +307,7 @@ aside{
     align-items:center;
     justify-content:center;
     width:20%;
+    border: solid 1px black;
 }
 
 
@@ -422,17 +425,92 @@ footer a{
     
 }
 
+/** A continuación insertamos las media querys para hacer la web responsive design: **/
 
-
-
-
-@media (max-width:700px){
-    header{
-        flex-direction: column;
+@media screen and (max-width: 1300px){
+    .logo{
+        width: 50%;
     }
 
-    nav {
-        flex-direction:column;
+    .lista-menu{
+        height: 150px;
+    }
+
+    .sec1{
+        width: 67%;
+        height: 963px;
+        font-size: 17px;
+    }
+
+    .sofa1{
+        width: 400px;
+    }
+
+    .sofa2{
+        width: 400px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .aside{
+        width: 250px;
+        height: 1004px;
+
+    }
+
+    .interiores{
+        width: 250px;
+        height: 334px;
+    }
+
+    .mueble{
+        width: 250px;
+        height: 334px;
+    }
+
+    .micasa{
+        width: 250px;
+        height: 335px;
+    }
+}
+
+@media screen and (max-width: 1000px) and (orientation:portrait){
+    .logo{
+        width: 65%;
+    }
+
+    .lista-menu{
+        height: 150px;
+    }
+
+    .sec1{
+        width: 60%;
+        height: 1000px;
+    }
+
+    .sofa1{
+        width: 400px;
+    }
+
+    .sofa2{
+        width: 400px;
+        height: 200px;
+    }
+
+    .aside{
+        width: 200px;
+    }
+
+    .interiores{
+        width: 200px;
+    }
+
+    .mueble{
+        width: 200px;
+    }
+
+    .micasa{
+        width: 200px;
     }
 }
 
