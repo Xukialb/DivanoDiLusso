@@ -144,7 +144,7 @@ nav a:hover {
 /*Lista principal del menú*/
 .lista-menu > li {
     position: relative;
-
+    display: inline-block;
 }
 
 
