@@ -8,14 +8,14 @@ body{
     }
 
 h2{
-    font-family: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     }
 
 #contenedor{
-    width: 50%;
+    width: 100%;
     margin:auto;
-    padding: 20px;
+    padding: 5px;
     border: solid #867e66;
 }
 
@@ -24,47 +24,14 @@ width: 100px;
 margin-top: 10px;
 }
 
-.div_inline_block{
-    display: inline-block;
-    justify-content: center;
-    background-color: #867e66;
-    padding-top: 25px;
-    width: 140px;
-    height: 40px;
-    text-align: center;
-    margin: 5px;
-    }
-
 a{
     color: #fcfaf6;
-    font-size: 15;
+    font-size: 12;
     }
 
 .a{
     color: black
 }
-
-nav{
-    width: 500px;
-    height:auto;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
-footer {
-    width: 500px;
-    height:auto;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 15;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-         
-     }
-
-    img.peq{
-        width: 50px;
-        height: 50px;
-    }
 
 .campo{
     width: 100%;
@@ -79,6 +46,276 @@ input[type="submit"]{
     background-color: #867e66;
     color: #fcfaf6;
 }
+
+/*HEADER CON LA IMAGEN DE FONDO*/
+header{
+    background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
+    url("../HEADER/otro.jpg");
+    background-size:cover;
+    display:flex;
+    width: 100%;
+    
+    /*AL TENER 2 CONTENEDORES DENTRO DEL HEADER, USAMOS BETWEEN PARA QUE MANDE A CADA CONTENEDOR A UN EXTREMO DIFERENTE DEL HEADER, ESTO SE APLICA CON "DISPLAY:FLEX"*/
+    justify-content:space-between;
+    
+}
+
+/*CONTENEDOR CON ICONOS DE REDES + TELEFONO DE CONTACTO*/
+.contenedor-derecho{
+    display:flex ;
+    justify-content:space-between;
+    flex-direction:column;
+    width:30%;
+    position: relative;
+}
+
+.redes {
+    display:flex;
+    justify-content:right;
+    padding-right:10px;
+    height: 40px;
+    padding-top:10px;
+}
+
+.telefono{
+    display:flex;
+    align-items:center;
+    padding-right:5px;
+    padding-bottom:90px;
+    justify-content:center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    border-radius:8px;
+    margin-right:10px;
+}
+
+.telefono img{
+    padding-right:5px;
+    filter: brightness(0) invert(1);
+    height:40px;
+}
+/*-----------------------------------*/
+/*-----------------------------------*/
+
+/*CONTENEDOR CON EL LOGOTIPO DE LA EMPRESA*/
+.logo{
+    display:flex;
+    width:70%;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+.logo-img{
+    display:flex;
+    height:700px;
+    /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color de la imagen con la propiedad filter*/
+    filter: brightness(0) invert(1);
+    }
+
+
+
+/*Barra de navegación o de menú*/
+nav{
+    /*background-color:rgb(148, 139, 99);
+    */
+    background:transparent;
+    margin-top:-60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:50px;
+}
+
+/*Lista de menu*/
+nav ul{
+    list-style: none;
+
+}
+
+nav h1{
+    justify-content:center;
+    padding-right:10px;
+    color:white;
+}
+
+
+
+/*Configuración de todos "a" que hay en el nav*/
+nav a{
+    padding-right:20px;
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*Con el transition + el border-obttom, vamos a conseguir que al aplicar un hover sobre los "a" nos aparezca la barra inferior debajo de cada texto del menú*/
+    transition: all .55s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+/*Lista principal del menú*/
+.lista-menu > li {
+    position: relative;
+    display: inline-block;
+}
+
+.lista-menu > li > a{
+    display: block;
+    padding: 15px 20px;    
+}
+
+/* Menú con los tipos de productos*/
+.submenu-productos{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    border-radius:8px;
+    width:150%;
+    text-align:center;
+    padding-right:25px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+    transition: opacity 0.55s;
+}
+
+
+.submenu-productos li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.lista-menu li:hover .submenu-productos{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*SUBMENU FIJOS*/
+/* Menú con los tipos de productos*/
+.submenu-fijos{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    border-radius:8px;
+    width:50%;
+    text-align:center;
+    padding-right:25px;
+    margin-left:250px;
+    margin-top: -50px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.55s;
+}
+
+
+.submenu-fijos li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.submenu-productos li:hover .submenu-fijos{
+    visibility: visible;
+    opacity: 1;
+}
+
+/*SUBMENU DESLIZANTES*/
+/* Menú con los tipos de productos*/
+.submenu-deslizantes{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    border-radius:8px;
+    width:50%;
+    text-align:center;
+    padding-right:25px;
+    margin-left:250px;
+    margin-top: -50px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.55s;
+}
+
+
+.submenu-deslizantes li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.submenu-productos li:hover .submenu-deslizantes{
+    visibility: visible;
+    opacity: 1;
+}
+
+#footer-principal {
+    border: 1px solid #867e66;
+    height: 280px;
+    text-align: center;
+    background: #FFF;
+    margin: 10px;
+    background-color: #867e66;
+    color: #fcfaf6;
+}
+
+h3{
+    font-size: 15;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fcfaf6;    
+}
+
+.redes-sociales{
+    margin-top: 10px;
+    width: 25%;
+
+}
+
+img.peq{
+    margin-left: 30px;
+}
+
+.redes-sociales nav a{
+    margin: 10px;
+}
+
+.t{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flexbox;
+}
+       
+
+.copyright{
+    clear:both;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    }
+
+.footer{
+    padding-top: 5px;
+    }
 
 /**Diseño responsivo**/
 
@@ -102,5 +339,3 @@ input[type="submit"]{
     }
     
 }
-
-
