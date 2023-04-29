@@ -1,7 +1,17 @@
-
+*{
+    padding: 0px;
+    margin: 0px;
+}
 
 body{
     background-color: #fcfaf6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+h3{
+    font-size: 1.2vw;
 }
 /*CONTENEDOR DE TODA LA PÁGINA, DONDE CONFIGURAMOS MARGENES Y ALINEACIONES */
 .contenedor{
@@ -44,19 +54,21 @@ body{
 .telefono{
     display:flex;
     align-items:center;
-    padding-right:5px;
+    padding-right:70px;
     padding-bottom:90px;
     justify-content:center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:white;
     border-radius:8px;
     margin-right:10px;
+    margin-bottom: 50px;
 }
 
 .telefono img{
     padding-right:5px;
     filter: brightness(0) invert(1);
-    height:40px;
+    height:2vw;
+
 }
 /*-----------------------------------*/
 /*-----------------------------------*/
@@ -66,7 +78,7 @@ body{
     display:flex;
     max-width:100%;
     align-items:center;
-    justify-content:center;    
+    justify-content:center;   
 }
 
 
@@ -74,6 +86,7 @@ body{
 .logo-img{
     display:flex;
     height:500px;
+    width: 100vw;
     /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color de la imagen con la propiedad filter*/
     filter: brightness(0) invert(1);
     /*Le metemos mucho padding a la izquierda para tratar de centrar la imagen del logo con respecto al header ya que no podemos montar este contenedor, sobre el que tenemos a la derecha con redes y contacto*/
@@ -131,7 +144,7 @@ nav a:hover {
 /*Lista principal del menú*/
 .lista-menu > li {
     position: relative;
-    display: inline-block;
+
 }
 
 
@@ -242,48 +255,41 @@ nav a:hover {
 .submenu-productos li:hover .submenu-deslizantes{
     visibility: visible;
     opacity: 1;
-
 }
-
-
-
-
-
-
-
-.contenedor2{
-    
-    width:100%;
-    display:flex;
-    height:1005px;
-    padding-top:10px;
-}
-
 
 section{
     float: left;
-    width:80vw; 
-
+    width:77%; 
+    height: 985px;
+    margin-top: 10px;
     border: solid 1px black;
-
-}
-
-section header{
-    text-align: center;
-}
-
-article{
-    text-align: justify;
-    font-size:1vw;
-}
-
-.sec1{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 20px;
 }
 
+section h2{
+    font-size: 1.8vw;
+}
+
+
+section header{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+article{
+    text-align: justify;
+    font-size:1.1vw;
+}
+
+.img-p1{
+    padding: 10px;
+}
+
 .sofa1{
-    margin-right: 10px;
+    float: left;
+    margin-right: 20px;
     width: 100%;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -294,6 +300,9 @@ article{
 }
 
 .sofa2{
+
+    float:right;
+
     margin-left: 20px;
     width: 100%;
     border-radius: 15px;
@@ -304,36 +313,36 @@ article{
     box-shadow: 0px 3px 5px rgba(15,15,15,.5);
 }
 
-.img-art1{
-    float: left;
-    margin: 10px;
-    width: 30vw;
-}
-
-.img-art2{
-    float:right;
-    width: -20vw;
+.img-p2{
+    padding: 10px;
 }
 
 .footer-sec1{
     text-align: center;
 }
 
-
-
-aside{
+#aside{
     float:right;
     align-items:center;
     justify-content:center;
-    max-width:20vw;
+    width:19%;
+    height: 1025px;
     border: solid 1px black;
+    margin-top: 10px;
+
 }
 
+.interiores{
+    margin-bottom: 10px;
+}
 
-
+.el-mueble{
+    margin-bottom: 10px;
+}
 
 #footer-principal{
     display:flex;
+    clear: both;
     color:white;
     background-color:black;
     background-image:url("../HEADER/footer.jpg");
@@ -399,10 +408,10 @@ footer a{
 
 
 .menufooter{
-    display:flex;
+    padding-top: 20px;
     padding-left:25px;
     
-    height:180px;
+    height:30px;
     align-items:center;
     justify-content:center;    
 }
@@ -440,15 +449,18 @@ footer a{
 }
 .watsap{
     filter:brightness(0) invert(1);
-    height:35px;
-    
+    height:35px;    
+}
+
+.copyright{
+    padding-bottom: 10px;
 }
 
 /** A continuación insertamos las media querys para hacer la web responsive design: **/
 
 @media screen and (min-width: 1300px){
-    .logo{
-        width: 50%;
+    .logo-img{
+        max-width: 30vw;
     }
 
     .lista-menu{
@@ -493,43 +505,168 @@ footer a{
     }
 }
 
-@media screen and (max-width: 1000px) and (orientation:portrait){
+@media screen and (max-width: 1000px) and (min-width: 700px) and (orientation:portrait){
+    
     .logo{
-        width: 65%;
+        width: 30vw;
+    }
+
+    .logo-img{
+        max-width: 50vw;
+    }
+
+    .telefono h2{
+        font-size: 1.4vw;
+    }
+
+    header{
+        margin-bottom: 10px;
     }
 
     .lista-menu{
         height: 150px;
     }
 
-    .sec1{
-        width: 60%;
-        height: 1000px;
+
+    .contenedor2{
+        display: block;
+
     }
 
+    .sec1{
+        width: 91%;
+        height: 450px;
+        display: block;
+
+    }
+
+
+
     .sofa1{
-        width: 400px;
+        width: 100%;
+
     }
 
     .sofa2{
-        width: 400px;
-        height: 200px;
+        width: 250px;
     }
 
     .aside{
-        width: 200px;
+
+     display: flex;
+     position: relative;
+     left: -175px;
+
     }
 
     .interiores{
-        width: 200px;
+
+        width: 162px;
     }
 
     .mueble{
-        width: 200px;
+        width: 162px;
     }
 
     .micasa{
-        width: 200px;
+        width: 162px;
     }
+
+    .tabla{
+        font-size: 10px;
+    }
+
+    .menufooter{
+
+        font-size: 10px;
+    }
+
+    #footer-principal{
+        position: relative;
+        top: -298px;
+    }
+
+    @media screen and (max-width: 1000px) and (min-width: 700px) and (orientation: landscape){
+    
+        .logo{
+            width: 5000px;
+        }
+    
+        .logo-img{
+            max-width: 20vw;
+            position: relative;
+            left: 500px;
+        }
+    
+        .telefono h2{
+            font-size: 1.4vw;
+        }
+    
+        header{
+            margin-bottom: 10px;
+        }
+    
+        .lista-menu{
+            height: 150px;
+        }
+    
+    
+        .contenedor2{
+            display: block;
+    
+        }
+    
+        .sec1{
+            width: 91%;
+            height: 450px;
+            display: block;
+    
+        }
+    
+    
+    
+        .sofa1{
+            width: 100%;
+    
+        }
+    
+        .sofa2{
+            width: 250px;
+        }
+    
+        .aside{
+    
+         display: flex;
+         position: relative;
+         left: -175px;
+    
+        }
+    
+        .interiores{
+    
+            width: 162px;
+        }
+    
+        .mueble{
+            width: 162px;
+        }
+    
+        .micasa{
+            width: 162px;
+        }
+    
+        .tabla{
+            font-size: 10px;
+        }
+    
+        .menufooter{
+    
+            font-size: 10px;
+        }
+    
+        #footer-principal{
+            position: relative;
+            top: -298px;
+        }
 }
 
