@@ -123,14 +123,13 @@ nav{
     /*background-color:rgb(148, 139, 99);
     */
     background:transparent;
-    margin-top:-60px;
+    margin-top:-80px;
     display:flex;
     justify-content:center;
     align-items:center;
-    width:64vw;
+    width:100%;
     height:50px;
-    position: relative;
-    bottom: 30px;
+    z-index:1006;
 }
 
 /*Lista de menu*/
@@ -139,20 +138,13 @@ nav ul{
 
 }
 
-nav h1{
-    justify-content:center;
-    padding-right:10px;
-    color:white;
-}
-
-
 
 /*Configuración de todos "a" que hay en el nav*/
 nav a{
     padding-right:20px;
     color:white;
     text-decoration:none;
-    font-size:1.5vw;
+    font-size:24px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     /*Con el transition + el border-obttom, vamos a conseguir que al aplicar un hover sobre los "a" nos aparezca la barra inferior debajo de cada texto del menú*/
     transition: all .55s ease;
@@ -182,17 +174,19 @@ nav a:hover {
 /* Menú con los tipos de productos*/
 .submenu-productos{
     position:absolute;
-    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
     border-radius:8px;
     width:150%;
     text-align:center;
     padding-right:25px;
+    margin-top:25px;
     /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
     con el que aparece el submenú cuando ponemos el ratón por encima*/
     visibility:hidden;
     opacity: 0;
 
     transition: opacity 0.55s;
+    z-index:1007;
 }
 
 
@@ -215,7 +209,7 @@ nav a:hover {
 /* Menú con los tipos de productos*/
 .submenu-fijos{
     position:absolute;
-    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
     border-radius:8px;
     width:50%;
     text-align:center;
@@ -226,7 +220,7 @@ nav a:hover {
     con el que aparece el submenú cuando ponemos el ratón por encima*/
     visibility:hidden;
     opacity: 0;
-
+    z-index:1008;
     transition: opacity 0.55s;
 }
 
@@ -251,7 +245,7 @@ nav a:hover {
 /* Menú con los tipos de productos*/
 .submenu-deslizantes{
     position:absolute;
-    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
     border-radius:8px;
     width:50%;
     text-align:center;
@@ -278,6 +272,60 @@ nav a:hover {
 .submenu-productos li:hover .submenu-deslizantes{
     visibility: visible;
     opacity: 1;
+
+}
+
+
+/*SECTION CON LOS TIPOS DE SOFÁS*/
+.product_table{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+  width:90%;
+  margin:auto;
+  padding:40px 0;
+  padding-top:60px;
+  grid-gap: 10px;
+  overflow: hidden;
+  z-index:1008;
+}
+/*CONFIGURACION DE CADA IMAGEN DE LA GALERÍA QUE SE MUESTRA EM PEQUEÑO*/
+.product_table img{
+    width: 90%;
+    vertical-align: top;
+    height:400px;
+    object-fit: cover;
+    border-radius:8px;
+}
+
+/*EFECTO ZOOM AL PASAR POR ENCIMA DE UNA IMAGEN CON EL MOUSE*/
+
+.product_table img:hover{
+    transform: scale(1.10);
+    transition: .6s
+}
+
+
+/*Texto*/
+.product_table >h2{
+    text-align:center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:40px;
+    color:white;
+    background:rgb(81, 82, 88);
+
+}
+
+
+/*Vamos a dar forma a la galería de imágenes*/
+.product_table > a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+/*Metemos animaciones*/
+.galeria a:hover img{
+    filter:blur(2px);
 }
 
 section{
