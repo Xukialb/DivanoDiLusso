@@ -340,10 +340,11 @@ section{
     border: solid 1px black;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 20px;
+    padding-top: 50px;
 }
 
-section h2{
-    font-size: 1.8vw;
+section h4{
+    font-size: 1.2vw;
 }
 
 
@@ -402,9 +403,9 @@ article{
     align-items:center;
     justify-content:center;
     width:13vw;
-    height: 50vw;
+    height: 52.5vw;
     border: solid 1px black;
-    margin-top: 10px;
+    margin-top: 30px;
 
 }
 
