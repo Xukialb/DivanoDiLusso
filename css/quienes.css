@@ -272,9 +272,9 @@
     float: left;
     width: 60%;
     margin:15px 10px 5px 10px;
+}
 
-<<<<<<< HEAD
-#footer-principal{
+ #footer-principal{
     clear: both;
     background-image: url( ../HEADER/footer.jpg);
     background-size: cover;
@@ -285,16 +285,6 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     font-size: 20px;
-=======
-}
-
- #footer-principal{
-    display:flex;
-    color:white;
-    background-image:url("/HEADER/footer.jpg");
-    background-size:cover;
-    height:350px;    
->>>>>>> kyty
 }
 
 footer a{
@@ -303,20 +293,10 @@ footer a{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-<<<<<<< HEAD
 footer h3{
     font-size: 15;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #fcfaf6;    
-=======
-
-.tabla{    
-    height:75%;
-    width:100%;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:white;
->>>>>>> kyty
 }
 
 table th{
@@ -356,7 +336,6 @@ img.peq{
     height:30px; 
 }
 
->>>>>>> kyty
 
 .t{
     width: 100%;
@@ -366,7 +345,6 @@ img.peq{
 }
        
 
-<<<<<<< HEAD
 .copyright{
     clear:both;
     margin: 10px;
