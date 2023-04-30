@@ -1,0 +1,741 @@
+/*CONTENEDOR DE TODA LA PÁGINA, DONDE CONFIGURAMOS MARGENES Y ALINEACIONES */
+.contenedor{
+    display:block;
+    width:1270px;
+    margin: auto;
+    text-align:center;
+}
+
+
+/*HEADER CON LA IMAGEN DE FONDO*/
+header{
+    background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
+    url("/HEADER/otro.jpg");
+    background-size:cover;
+
+    display:flex;
+    width:100%;
+    min-height:800px;
+
+    /*AL TENER 2 CONTENEDORES DENTRO DEL HEADER, USAMOS BETWEEN PARA QUE MANDE A CADA CONTENEDOR A UN EXTREMO DIFERENTE DEL HEADER, ESTO SE APLICA CON "DISPLAY:FLEX"*/
+    justify-content:space-between;
+    
+}
+
+/*CONTENEDOR CON ICONOS DE REDES + TELEFONO DE CONTACTO*/
+.contenedor-derecho{
+    display:flex ;
+    justify-content:space-between;
+    flex-direction:column;
+    width:35%;
+}
+
+.redes {
+    display:flex;
+    justify-content:right;
+    padding-right:10px;
+    height: 40px;
+    padding-top:10px;
+}
+
+.telefono{
+    display:flex;
+    align-items:center;
+    padding-right:5px;
+    padding-bottom:90px;
+    justify-content:center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    border-radius:8px;
+    margin-right:10px;
+}
+
+.telefono img{
+    padding-right:5px;
+    filter: brightness(0) invert(1);
+    height:40px;
+}
+/*-----------------------------------*/
+/*-----------------------------------*/
+
+/*CONTENEDOR CON EL LOGOTIPO DE LA EMPRESA*/
+.logo{
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+
+
+.logo-img{
+    display:flex;
+    height:500px;
+    /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color de la imagen con la propiedad filter*/
+    filter: brightness(0) invert(1);
+    /*Le metemos mucho padding a la izquierda para tratar de centrar la imagen del logo con respecto al header ya que no podemos montar este contenedor, sobre el que tenemos a la derecha con redes y contacto*/
+
+    /*Esto habrá que modificarlo con media querys*/
+    padding-left:350px;
+    
+}
+
+
+
+/*Barra de navegación o de menú*/
+nav{
+    /*background-color:rgb(148, 139, 99);
+    */
+    background:transparent;
+    margin-top:-80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:50px;
+    z-index:1006;
+}
+
+/*Lista de menu*/
+nav ul{
+    list-style: none;
+
+}
+
+
+/*Configuración de todos "a" que hay en el nav*/
+nav a{
+    padding-right:20px;
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*Con el transition + el border-obttom, vamos a conseguir que al aplicar un hover sobre los "a" nos aparezca la barra inferior debajo de cada texto del menú*/
+    transition: all .55s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+/*Lista principal del menú*/
+.lista-menu > li {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.lista-menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    
+    
+}
+
+/* Menú con los tipos de productos*/
+.submenu-productos{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
+    border-radius:8px;
+    width:150%;
+    text-align:center;
+    padding-right:25px;
+    margin-top:25px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.55s;
+    z-index:1007;
+}
+
+
+.submenu-productos li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.lista-menu li:hover .submenu-productos{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+/*SUBMENU FIJOS*/
+/* Menú con los tipos de productos*/
+.submenu-fijos{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
+    border-radius:8px;
+    width:50%;
+    text-align:center;
+    padding-right:25px;
+    margin-left:250px;
+    margin-top: -50px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+    z-index:1008;
+    transition: opacity 0.55s;
+}
+
+
+.submenu-fijos li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.submenu-productos li:hover .submenu-fijos{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+
+/*SUBMENU DESLIZANTES*/
+/* Menú con los tipos de productos*/
+.submenu-deslizantes{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
+    border-radius:8px;
+    width:50%;
+    text-align:center;
+    padding-right:25px;
+    margin-left:250px;
+    margin-top: -50px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.55s;
+}
+
+
+.submenu-deslizantes li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.submenu-productos li:hover .submenu-deslizantes{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+/*SECTION CON LOS TIPOS DE SOFÁS*/
+.product_table{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+  width:90%;
+  margin:auto;
+  padding:40px 0;
+  padding-top:60px;
+  grid-gap: 10px;
+  overflow: hidden;
+  z-index:1008;
+}
+/*CONFIGURACION DE CADA IMAGEN DE LA GALERÍA QUE SE MUESTRA EM PEQUEÑO*/
+.product_table img{
+    width: 90%;
+    vertical-align: top;
+    height:400px;
+    object-fit: cover;
+    border-radius:8px;
+}
+
+/*EFECTO ZOOM AL PASAR POR ENCIMA DE UNA IMAGEN CON EL MOUSE*/
+
+.product_table img:hover{
+    transform: scale(1.10);
+    transition: .6s
+}
+
+
+/*Texto*/
+.product_table >h2{
+    text-align:center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:40px;
+    color:white;
+    background:rgb(81, 82, 88);
+
+}
+
+
+/*Vamos a dar forma a la galería de imágenes*/
+.product_table > a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+/*Metemos animaciones*/
+.galeria a:hover img{
+    filter:blur(2px);
+}
+
+
+
+
+/*FOOTER*/
+#footer-principal{
+    display:flex;
+    color:white;
+    background-image:url("/header/footer.jpg");
+    background-size:cover;
+    height:300px;    
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.tabla{    
+    height:70%;
+    width:100%;
+    font-size:22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+}
+
+.horario{
+    align-items:center;
+    padding-top:20px; 
+    padding-left: 30px;   
+    width:40%;
+    text-align:center;
+
+
+}
+
+
+.contenedorfooter{
+    display:flex;
+    width:60%;
+    align-items:left;
+    justify-content:space-between;
+    flex-direction: column;
+    font-size:22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contactofooter{
+    display:flex;
+    text-align:left;
+    align-items:center;
+    margin-bottom: 10px;
+    height:30px; 
+}
+
+
+.contactofooter p{
+    padding:20px;    
+    
+}
+
+
+
+.menufooter{
+    display:flex;
+    padding-left:25px;
+    
+    height:180px;
+    align-items:center;
+    justify-content:center;    
+}
+
+.menufooter a{
+    margin-right: 40px;
+}
+
+.tablamenu{
+    color: white;
+    text-align:center;
+    height:70%;
+    width:100%;
+    font-size:22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    
+}
+.email{
+    
+    display:flex;
+    align-items:center;
+    height:30px;
+    padding-bottom:5px;
+
+}
+
+.email p{
+    padding-left:10px;
+}
+
+.email img{
+    height:30px;
+    filter:brightness(0) invert(1);
+}
+.watsap{
+    filter:brightness(0) invert(1);
+    height:35px;
+    
+}
+
+.copyright{
+    text-align:left;
+    padding-left:20px;
+}
+
+/*TEXTOS SUELTOS DEL BODY*/
+
+.tlf{
+    background-color:transparent;
+}
+h2{
+    color:white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    Background-color:rgb(54, 54, 54);
+}
+
+
+
+/*Media Queries*/
+
+
+/*ADAPTADO A iPAD AIR VERTICAL*/
+@media (max-width: 1300px){
+    body{
+        justify-content:center;
+    }
+    .contenedor{
+        
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        
+        width:600px;
+    }
+
+    .logo-img{
+        width:100%;
+        height:50%;
+  
+    }
+    .logo{
+        justify-content:right;
+        padding-right:12%;
+        width:100%;
+    }
+
+    .contenedor-derecho{
+        display:none;
+    }
+    /*MENU NAV*/
+    nav{
+        margin-top:0px;
+        display:block;
+        text-align:center;
+        align-items:center;
+        margin-left:150px;
+        width:40%;
+        height:100%;
+
+    }
+
+    nav  a{
+        color:black;
+        font-size:28px;
+    }
+
+    nav a:hover {
+        border-bottom: 2px solid black;
+    }
+
+  
+
+    /*PRODUCTOS*/
+    .lista-menu > li > a{
+        justify-content:center;
+        text-align:center;
+        align-items:center;
+        margin-right:150px;
+    }
+
+    .submenu-productos{
+        background:white;
+        width:80%;
+    }
+
+    /*SUBMENU FIJOS*/
+
+    .submenu-fijos{
+        background:white;
+        width:50%;
+    }
+
+    /*SUBMENU DESLIZANTES*/
+    .submenu-deslizantes{
+        background:white;
+
+    }
+
+    /*Imagen con las medidas*/
+    .medidas img{
+        width:100%;
+        height:300px;
+    }
+
+    /*Ampliamos las telas*/
+    .tabla2{
+       
+        width:100%;
+    }
+    .telas img{
+        width:100%;
+        height:150px;
+    }
+
+    /*Ajustamos footer*/
+
+    /*ELIMINAMOS EL HORARIO*/
+    .horario{
+        display:none;
+    }
+
+    /*Ajustamos dimensiones del contenedor*/
+    .contenedorfooter{
+        
+        width:100%;
+        height:100%;
+        align-items:center;
+    }
+
+    /*Menu del footer*/
+    .menufooter{
+        
+        width:100%;
+        height:50px;
+        padding-top:20px;
+    }
+
+    /*WHATSAPP Y EMAIL FOOTER*/
+    .contactofooter{
+        padding-top:20px;
+
+    }
+
+
+    /*AJUSTES DE LAS LIGHT BOX*/
+    .light-box{
+            height:100%;
+    }
+
+    .light-box img{
+        width: 80%;
+        max-height: 90%;
+    }
+
+        /*AJUSTAMOS LAS FLECHAS DE LAS LIGHT BOX*/
+        .next img{
+            height:35px;
+            width:30px;
+        }
+
+        /*AJUSTAMOS LA X DE LAS LIGHT BOX*/
+        .close{
+            top:25%;
+        }
+}
+
+
+/*ADATPADO A iPad AIR HORIZONTAL*/
+@media (max-width:1180px) and (orientation:landscape)
+{
+    .contenedor{
+        width:900px;
+    }
+
+    /*CENTRAMOS EL LOGO*/
+    .logo{
+        
+        padding-right:27%;
+    }
+
+    /*CENTRAMOS EL MENU NAV*/
+    nav{
+        margin-left:325px;
+    }
+
+    /*Agrandamos la imagen de las medidas*/
+    .medidas img{
+        width:90%;
+        height:100%;
+    }
+
+    /*Agrandamos las imágenes de las telas*/
+    .telas img{
+        height:200px;
+    }
+
+    
+    /*AJUSTES DE LAS LIGHT BOX*/
+    .light-box{
+        height:100%;
+    }
+
+        .light-box img{
+            width: 80%;
+            max-height: 90%;
+        }
+
+    /*AJUSTAMOS LAS FLECHAS DE LAS LIGHT BOX*/
+    .next img{
+        height:35px;
+        width:30px;
+    }
+
+    /*AJUSTAMOS LA X DE LAS LIGHT BOX*/
+    .close{
+        top:5%;
+    }
+
+}
+
+
+/*ADAPTADO A iPhone 12 PRO VERTICAL*/
+@media (max-width:390px){
+    .body{
+        justify-content:center;
+        text-align:center;
+      
+    }
+    .contenedor{
+        
+      
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        
+        width:900px;
+    }
+    /*Aumentamos el tamaño del logo*/
+    .logo img{
+        width:100%;
+        height:500px;
+    }
+    head{
+        width:100%;
+    }
+
+    /*Centramos el logo*/
+    .logo{
+        
+        padding-right:20%;
+    }
+
+    /*Ajustamos el nav*/
+    nav{
+        padding-left:150px;
+    }
+    nav a{
+        font-size:42px;
+    }
+
+    /*Ajustamos la X de las light box*/
+    .close{
+        top:34%;
+    }
+
+    /*Texto medidas y telas*/
+    h2{
+        font-size:38px;
+    }
+
+
+
+    #footer-principal{
+        margin-top:50px;
+    }
+    .menufooter{
+        display:none;
+    }
+
+    .contactofooter{
+        padding-top:70px;
+        font-size:36px;
+    }
+
+    .email{
+        font-size:36px;
+    }
+
+    .email img{
+        width:40px;
+        height:40px;
+    }
+
+    .copyright{
+        font-size:33px;
+    }
+}
+
+/*ADAPTADO A iPhone 12 PRO HORIZONTAL*/
+@media (max-width:844px) and (orientation:landscape){
+    body{
+        justify-content:center;
+    }
+
+    /*Ajustamos lso contenidos dle contenedor*/
+   .contenedor{
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:100%;
+    padding-left:25px;
+   }
+
+   /*Centramos el logo*/
+   .logo{
+    padding-right:25%;
+   }
+
+
+   /*MENU NAV*/
+   nav{
+    margin-left:280px;
+   }
+
+   /*AJUSTAMOS LAS FLECHAS DE LAS LIGHT BOX*/
+   .next img{
+    padding-left:10px;
+    padding-right:10px;
+    
+   }
+
+   /*AJUSTAMOS LA X DE LAS LIGHT BOX*/
+   .close{
+    top:-10px;
+   }
+}
