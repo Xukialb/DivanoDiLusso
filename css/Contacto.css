@@ -1,4 +1,5 @@
 
+/** El body define el formato(márgenes, tamaño y tipo de fuente) que tendrá la parte visible de la página**/
 body{
     margin: 10px;
     padding: 10px;
@@ -7,23 +8,19 @@ body{
     font-size: 20px;
     }
 
-h2{
+/** Defino el estilo para todas las etiquetas h2**/
+    h2{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     }
 
-#contenedor{
-    width: 50%;
-    margin:auto;
-    padding: 5px;
-    border: solid #867e66;
-}
-
+/** Defino el ancho del label y los márgenes que tendrá **/
 label{
 width: 100px;
 margin-top: 10px;
 }
 
+/** Defino el color de las letras para las etiquetas "a" **/
 a{
     color: #fcfaf6;
     font-size: 12;
@@ -33,17 +30,22 @@ a{
     color: black
 }
 
+/** Defino el ancho de los campos a completar y sus márgenes**/
 .campo{
     width: 100%;
     margin-bottom: 20px;
 }
 
+/**Doy el tamaño deseado para el ingreso de texto en el área de consultas**/
 textarea{
     height: 50px;
 }
 
+/**Defino el clor del botón enviar**/
 input[type="submit"]{
-    background-color: #867e66;
+    background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
+    url("../HEADER/otro.jpg");
+    background-size:cover;
     color: #fcfaf6;
 }
 
@@ -70,6 +72,8 @@ header{
     position: relative;
 }
 
+/** Usamos display flex para lograr un comportamiento adaptable. Como ueremos que esté arriba, 
+a la derecha, los indicamos con justify-content**/
 .redes {
     display:flex;
     justify-content:right;
@@ -78,6 +82,8 @@ header{
     padding-top:10px;
 }
 
+/** Como el caso anterior, con flex logramos adaptabilidad. Añadimos un padding para separar del nav.
+Con border radius, redondeamos el borde de la caja. **/
 .telefono{
     display:flex;
     align-items:center;
@@ -90,6 +96,7 @@ header{
     margin-right:10px;
 }
 
+/**Damos formato al ícono del teléfono invirtiendo los colores para que aparezca en blanco**/
 .telefono img{
     padding-right:5px;
     filter: brightness(0) invert(1);
@@ -99,6 +106,8 @@ header{
 /*-----------------------------------*/
 
 /*CONTENEDOR CON EL LOGOTIPO DE LA EMPRESA*/
+
+/**Definimos el tamaño y la alineacion de la caja que contendrá el logo de la empresa**/
 .logo{
     display:flex;
     width:50%;
@@ -107,10 +116,13 @@ header{
     
 }
 
+/**Con display flex, le damos adaptabilidad al logo y con height definimos el ancho que ocupará 
+dentro del header **/
 .logo-img{
     display:flex;
     height:400px;
-    /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color de la imagen con la propiedad filter*/
+    /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color 
+    de la imagen con la propiedad filter*/
     filter: brightness(0) invert(1);
     }
 
@@ -130,18 +142,18 @@ nav{
 }
 
 /*Lista de menu*/
+/** Aplicamos list-style: none para que el nav no aparezcan los marcadores de items**/
 nav ul{
     list-style: none;
 
 }
 
+/**Damos formato al navegador**/
 nav h1{
     justify-content:center;
     padding-right:10px;
     color:white;
 }
-
-
 
 /*Configuración de todos "a" que hay en el nav*/
 nav a{
@@ -311,26 +323,36 @@ img.peq{
 
 /**Diseño responsivo**/
 
-@media screen and (min-width: 701px)and (max-width: 1280px){
-    width: 50%;
-    margin: 10px;
+
+@media screen and (min-width: 701px) and (max-width: 700px) {
+
+}
+@media screen and (min-width: 380px) and (max-width: 700px) {
+
+
+    header{
+        height: 700px;
+    }
+   
+    .telefono{
+        font-size: 10;
+        margin-bottom: 30px;
+        
     }
 
-@media screen and (min-width: 300px) and (max-width: 700px) {
+    .telefono img{
+        height: 20px;
+        }
+
+    .logo-img{
+        margin-top: -200px;
+       padding-left: 200px;
+        width: 50%;
+        }
 
     nav{
-        width: 250px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 60%;
+        height: 10px;
+        }
+     
     }
-
-
-
-
-    footer{
-        width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-}
