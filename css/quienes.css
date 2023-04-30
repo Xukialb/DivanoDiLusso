@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-}
+}/*
 body{
     margin: auto;
     width: 70%;
@@ -8,16 +8,14 @@ body{
     margin-bottom: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
-    background-color:  #fcfaf6;
-    padding: 10px;
-    border: 3px solid  #867e66;
-}
+    background-color:#fcfaf6;
+}*/
 .pagina{
-    display:block;
-    width:100%;
-    margin: auto;
-   
-}
+    
+        display:block;
+        width:70%;
+        margin: auto;
+    }
    
 header{
     background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
@@ -259,131 +257,7 @@ nav a:hover {
     opacity: 1;
 
 }
-section{
-    width: 100%;
-    height: 750px;
-   /* display: flex;*/
-}
 
-#footer-principal{
-   display:flex;
-    color:white;
-    background-color:black;
-    background-image:url("../HEADER/footer.jpg");
-    background-size:cover;
-    height:300px;    
-}
-
-footer a{
-    text-decoration: none;
-    color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-
-.tabla{    
-    height:70%;
-    width:100%;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:white;
-}
-
-.horario{
-    align-items:center;
-    padding-top:20px; 
-    padding-left: 30px;   
-    width:40%;
-    text-align:center;
-
-
-}
-
-
-.contenedorfooter{
-    display:flex;
-    
-    width:60%;
-    align-items:left;
-    justify-content:space-between;
-    flex-direction: column;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.contactofooter{
-    display:flex;
-    text-align:left;
-    align-items:center;
-    margin-bottom: 10px;
-    height:30px;
-   
-}
-
-.contacto{
-    display:flex;
-}
-
-.contactofooter p{
-    padding:20px;    
-    
-}
-
-
-
-.menufooter{
-    display:flex;
-    padding-left:25px;
-    
-    height:180px;
-    align-items:center;
-    justify-content:center;    
-}
-
-.menufooter a{
-    margin-right: 40px;
-}
-
-.tablamenu{
-    color: white;
-    text-align:center;
-    height:70%;
-    width:100%;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    
-}
-.email{
-    
-    display:flex;
-    align-items:center;
-    height:30px;
-    padding-bottom:5px;
-
-}
-
-.email p{
-    padding-left:10px;
-}
-
-.email img{
-    height:30px;
-    filter:brightness(0) invert(1);
-}
-.watsap{
-    filter:brightness(0) invert(1);
-    height:35px;
-    
-}
-
-
-/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
-.submenu-productos li:hover .submenu-deslizantes{
-    visibility: visible;
-    opacity: 1;
-
-}
 section{
     width: 100%;
     height: 750px;
@@ -398,18 +272,21 @@ section{
     display: flex;
     margin-top: 20px;
     justify-content: center;
-    background-color: red;
+    background-color: #fcfaf6;
    padding: 5px;
    margin-bottom: 2px;
+  
 }
 .text{
    
    width: 50%;
     height: 730px;
-    background-color: aqua;
+    background-color: #fcfaf6;;
     padding: 10px;
     margin-left: 2px;
-    font-size: 11px;
+    font-size: 17px;
+    color:  #867e66;
+   
     
 }
 .imagen-2{
@@ -417,13 +294,17 @@ section{
     width: 50%;
     height: 730px;
     background-color: blue;
-order: -1;
+    order: -1;
+    background-color: #fcfaf6;
+   
 }
 .imagen-2 img{
     width: 100%;
-    padding-top: 250px;
+   padding-top: 120px;
+   
 
 }
+
 
 #footer-principal{
    display:flex;
@@ -536,30 +417,22 @@ footer a{
     height:35px;
     
 }
-
-
-@media (max-width:700px){
-    header{
-        flex-direction: column;
-    }
-
-    nav {
-        flex-direction:column;
-    }
-    .contenedor{
-        flex-direction: row;
+/*
+@media (max-width: 1300px) {
+    section{
+        width: 100%;
+      
     }
 }
-/*
-@media screen and (min-width:1300px) {
-    body{
-    flex-direction:column;
-    width: 95%;
+
+@media (orientation:lanscape)and(max-width: 914px) {
+    section{
+        width: 100%;
+      
     }
-   /* .imagen-2 img {
-        width: 50%;
-
-    }*/
-/*.contenedor{
-
+}
+@media (min-width: 412px) {
+    section{
+       flex-direction: column;
+    }
 }*/
