@@ -365,12 +365,16 @@ article{
 }
 
 #footer-principal{
-    display:flex;
     clear: both;
-    color:white;
-    background-image:url("../HEADER/footer.jpg");
-    background-size:cover;
-    height:300px;    
+    background-image: url( ../HEADER/footer.jpg);
+    background-size: cover;
+    height: 180px;
+    text-align: center;
+    color: #fcfaf6;  
+    width: 100%; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 20px;
 }
 
 footer a{
@@ -379,102 +383,44 @@ footer a{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-.tabla{    
-    height:70%;
-    width:100%;
-    font-size:1.2vw;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:white;
+footer h3{
+    font-size: 15;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fcfaf6;    
 }
 
-.horario{
-    align-items:center;
-    padding-top:20px; 
-    padding-left: 30px;   
-    width:40%;
-    text-align:center;
+table th{
+    padding: 10px;
 }
 
-
-.contenedorfooter{
-    display:flex;    
-    width:60%;
-    align-items:left;
-    justify-content:space-between;
-    flex-direction: column;
-    font-size:1.2vw;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.redes-sociales{
+    margin-top: 10px;
+    width: 25%;
 }
 
-.contactofooter{
-    display:flex;
-    text-align:left;
-    align-items:center;
-    margin-bottom: 10px;
-    height:30px;
-   
+img.peq{
+    margin-left: 30px;
 }
 
-.contacto{
-    display:flex;
+.redes-sociales nav a{
+    margin: 10px;
 }
 
-.contactofooter p{
-    padding:20px;    
-    
+.t{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flexbox;
 }
-
-
-
-.menufooter{
-    padding-top: 20px;
-    padding-left:25px;
-    
-    height:30px;
-    align-items:center;
-    justify-content:center;    
-}
-
-.menufooter a{
-    margin-right: 40px;
-}
-
-.tablamenu{
-    color: white;
-    text-align:center;
-    height:70%;
-    width:100%;
-    font-size:1.2vw;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    
-}
-.email{
-    
-    display:flex;
-    align-items:center;
-    height:30px;
-    padding-bottom:5px;
-
-}
-
-.email p{
-    padding-left:10px;
-}
-
-.email img{
-    height:2vw;
-    filter:brightness(0) invert(1);
-}
-.watsap{
-    filter:brightness(0) invert(1);
-    height:2vw;    
-}
+       
 
 .copyright{
-    padding-bottom: 10px;
-}
+    clear:both;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    }
+
 
 /** A continuación insertamos las media querys para hacer la web responsive design: **/
 
