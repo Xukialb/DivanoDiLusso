@@ -1,11 +1,35 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
 body{
     background-color: #fcfaf6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+h3{
+    font-size: 1.2vw;
 }
 /*CONTENEDOR DE TODA LA PÁGINA, DONDE CONFIGURAMOS MARGENES Y ALINEACIONES */
 .contenedor{
     display:block;
-    width:70%;
+    width:70vw;
     margin: auto;
+}
+
+.logo{
+    width: 50vw;
+    height: 20vw;
+}
+
+
+.logo-img{
+    position:relative;
+    left: 70px;
+    top:200px;
 }
 
 /*HEADER CON LA IMAGEN DE FONDO*/
@@ -15,7 +39,7 @@ body{
     background-size:cover;
 
     display:flex;
-    width:100%;
+    max-width:100%;
     min-height:800px;
 
     /*AL TENER 2 CONTENEDORES DENTRO DEL HEADER, USAMOS BETWEEN PARA QUE MANDE A CADA CONTENEDOR A UN EXTREMO DIFERENTE DEL HEADER, ESTO SE APLICA CON "DISPLAY:FLEX"*/
@@ -28,7 +52,7 @@ body{
     display:flex ;
     justify-content:space-between;
     flex-direction:column;
-    width:35%;
+    max-width:35%;
 }
 
 .redes {
@@ -37,24 +61,35 @@ body{
     padding-right:10px;
     height: 40px;
     padding-top:10px;
+    position: relative;
+    right: 2vw;
 }
 
 .telefono{
     display:flex;
     align-items:center;
-    padding-right:5px;
+    padding-right:20px;
     padding-bottom:90px;
     justify-content:center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:white;
     border-radius:8px;
     margin-right:10px;
+    margin-bottom: 50px;
+    position: relative;
+    right: 4vw;
+    width: 300px;
 }
 
 .telefono img{
     padding-right:5px;
     filter: brightness(0) invert(1);
-    height:40px;
+    height:2vw;
+
+}
+
+.telefono h2{
+    font-size: 1.2vw;
 }
 /*-----------------------------------*/
 /*-----------------------------------*/
@@ -62,9 +97,9 @@ body{
 /*CONTENEDOR CON EL LOGOTIPO DE LA EMPRESA*/
 .logo{
     display:flex;
-    width:100%;
+    max-width:100%;
     align-items:center;
-    justify-content:center;    
+    justify-content:center;   
 }
 
 
@@ -72,6 +107,7 @@ body{
 .logo-img{
     display:flex;
     height:500px;
+    width: 100vw;
     /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color de la imagen con la propiedad filter*/
     filter: brightness(0) invert(1);
     /*Le metemos mucho padding a la izquierda para tratar de centrar la imagen del logo con respecto al header ya que no podemos montar este contenedor, sobre el que tenemos a la derecha con redes y contacto*/
@@ -91,8 +127,10 @@ nav{
     display:flex;
     justify-content:center;
     align-items:center;
-    width:100%;
+    width:64vw;
     height:50px;
+    position: relative;
+    bottom: 30px;
 }
 
 /*Lista de menu*/
@@ -114,7 +152,7 @@ nav a{
     padding-right:20px;
     color:white;
     text-decoration:none;
-    font-size:24px;
+    font-size:1.5vw;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     /*Con el transition + el border-obttom, vamos a conseguir que al aplicar un hover sobre los "a" nos aparezca la barra inferior debajo de cada texto del menú*/
     transition: all .55s ease;
@@ -240,80 +278,96 @@ nav a:hover {
 .submenu-productos li:hover .submenu-deslizantes{
     visibility: visible;
     opacity: 1;
-
 }
-
-
-
-
-
-
-
-.contenedor2{
-    
-    width:100%;
-    display:flex;
-    height:1005px;
-    padding-top:10px;
-}
-
 
 section{
     float: left;
-    width:80%; 
+    width:53vw; 
+    height: 50vw;
+    margin-top: 10px;
     border: solid 1px black;
-
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px;
 }
+
+section h2{
+    font-size: 1.8vw;
+}
+
 
 section header{
     text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
 }
 
 article{
     text-align: justify;
+    font-size:1.1vw;
 }
 
-.sec1{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-    padding: 20px;
+.img-p1{
+    padding: 10px;
 }
 
-section img{
-    padding-left: 20px;
-    padding-right: 20px;
-    
-}
-
-.img-art1{
+.sofa1{
     float: left;
-    margin: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(15,15,15,.5);
 }
 
-.img-art2{
+.sofa2{
+
     float:right;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: 100%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(15,15,15,.5);
+}
+
+.img-p2{
+    padding: 10px;
 }
 
 .footer-sec1{
     text-align: center;
 }
 
-
-
-aside{
+#aside{
     float:right;
     align-items:center;
     justify-content:center;
-    width:20%;
+    width:13vw;
+    height: 50vw;
+    border: solid 1px black;
+    margin-top: 10px;
+
 }
 
+.interiores{
+    margin-bottom: 10px;
+}
 
-
+.el-mueble{
+    margin-bottom: 10px;
+}
 
 #footer-principal{
     display:flex;
+    clear: both;
     color:white;
-    background-color:black;
     background-image:url("../HEADER/footer.jpg");
     background-size:cover;
     height:300px;    
@@ -329,7 +383,7 @@ footer a{
 .tabla{    
     height:70%;
     width:100%;
-    font-size:22px;
+    font-size:1.2vw;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:white;
 }
@@ -340,19 +394,16 @@ footer a{
     padding-left: 30px;   
     width:40%;
     text-align:center;
-
-
 }
 
 
 .contenedorfooter{
-    display:flex;
-    
+    display:flex;    
     width:60%;
     align-items:left;
     justify-content:space-between;
     flex-direction: column;
-    font-size:22px;
+    font-size:1.2vw;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -377,10 +428,10 @@ footer a{
 
 
 .menufooter{
-    display:flex;
+    padding-top: 20px;
     padding-left:25px;
     
-    height:180px;
+    height:30px;
     align-items:center;
     justify-content:center;    
 }
@@ -394,7 +445,7 @@ footer a{
     text-align:center;
     height:70%;
     width:100%;
-    font-size:22px;
+    font-size:1.2vw;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     
@@ -413,26 +464,447 @@ footer a{
 }
 
 .email img{
-    height:30px;
+    height:2vw;
     filter:brightness(0) invert(1);
 }
 .watsap{
     filter:brightness(0) invert(1);
-    height:35px;
-    
+    height:2vw;    
 }
 
+.copyright{
+    padding-bottom: 10px;
+}
 
+/** A continuación insertamos las media querys para hacer la web responsive design: **/
 
-
-
-@media (max-width:700px){
+@media screen and (max-width: 1300px){
     header{
-        flex-direction: column;
+        width: auto;
     }
 
-    nav {
-        flex-direction:column;
+    .contenedor-derecho{
+        position: relative;
+        right: 2vw;
+
     }
+
+    .logo{
+        width: 25vw;
+    }
+
+    .logo-img{
+        width: 50vw;
+        position: relative;
+    }    
+
+    .lista-menu{
+        height: 150px;
+    }
+
+    .telefono{
+        width: 40vw;
+        position: relative;
+        right: 15vw;
+    }
+
+    .section{
+        float: left;
+        width: 95%;
+        height: 62vw;
+        font-size: 20px;
+        margin-top: 10px;;
+    }
+
+    article{
+        font-size:1.5vw;
+    }
+
+    section h3{
+        font-size: 1.8vw;
+    }
+
+    .sofa1{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .sofa2{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    #aside{
+        display: flex;
+        float: left;
+        width: 99%;
+        height: 20vw;
+        margin-top: 0px;
+    }
+
+    .interiores{
+        width: 225px;
+        margin: 10px;
+        
+    }   
+
+    .el-mueble{
+        width: 225px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .mi-casa{
+        width: 225px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #footer-principal{
+        display: block;
+        height: 300px;
+    }
+
+    .horario{
+        width: 50%;
+        height: 100px;
+        position: relative;
+        left: 250px;
+    }
+
+    .contenedorfooter{
+        width: 98%;
+        height: 200px;
+        margin: 20px;
+    }
+
+    .menufooter{
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        width: 510px;
+        height: 100px;
+        right: 80px;
+        bottom: 50px;
+    }
+
+    .menufooter a{
+        display: block;
+        padding: 10px;
+    }
+
+    .contactofooter{
+        position: relative;
+        bottom: 50px;
+        left: 10px;
+        width: 300px;
+    } 
+
+    .email{
+        position: relative;
+        bottom: 30px;
+        left: 10px;
+        width: 95%;
+    }
+
+    .email-image{
+        position: relative;
+        bottom: 30px;
+    }
+
+    .menufooter{
+        position: relative;
+        left: 300px;
+    }
+
+    .copyright{
+        position: relative;
+        left: 350px;
+        bottom: 80px;
+    }
+
 }
 
+@media screen and (width: 820px) and (orientation:portrait){
+    
+    .logo{
+        width: 25vw;
+        height: 300px;
+    }
+
+    .contenedor-derecho{
+        position: relative;
+        right: 2vw;
+
+    }
+
+    .logo-img{
+        width: 50vw;
+        position: relative;
+
+    }    
+
+    .lista-menu{
+        height: 150px;
+    }
+
+    .telefono{
+        width: 40vw;
+        position: relative;
+        right: 15vw;
+    }
+
+    .section{
+        float: left;
+        width: 92%;
+        height: 60vw;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    article{
+        font-size:1.5vw;
+    }
+
+    section h3{
+        font-size: 1.8vw;
+    }
+
+    .sofa1{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .sofa2{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .footer-sec1{
+        position: relative;
+        bottom: 30px;
+    }
+
+    #aside{
+        display: flex;
+        float: left;
+        width: 99%;
+        height: 20vw;
+        margin-top: 0px;
+    }
+
+    .interiores{
+        width: 225px;
+        margin: 10px;
+        
+    }   
+
+    .el-mueble{
+        width: 225px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .mi-casa{
+        width: 225px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #footer-principal{
+        display: block;
+        height: 500px;
+    }
+
+    .horario{
+        width: 50%;
+        height: 100px;
+        position: relative;
+        left: 150px;
+    }
+
+    .contenedorfooter{
+        width: 98%;
+        height: 200px;
+        margin: 20px;
+    }
+
+    .menufooter{
+        position: relative;
+        display: flex;
+        width: 10px;
+        height: 100px;
+        right: 800px;
+        bottom: 70px;
+    }
+
+    .contactofooter{
+        position: relative;
+        bottom: 90px;
+        left: 10px;
+        width: 300px;
+    } 
+
+    .email{
+        position: relative;
+        bottom: 40px;
+        left: 10px;
+        width: 95%;
+    }
+
+    .email-image{
+        position: relative;
+        bottom: 40px;
+    }
+
+    .menufooter{
+        position: relative;
+        left: 300px;
+    }
+
+    .copyright{
+        position: relative;
+        left: 250px;
+        bottom: 110px;
+    }    
+}
+
+@media screen and (width: 412px) and (orientation:portrait){
+    
+    .logo{
+        width: 0vw;
+        height: 300px;
+    }
+
+    .contenedor-derecho{
+        position: relative;
+        right: 2vw;
+
+    }
+
+    .logo-img{
+        width: 50vw;
+        position: static;
+    }   
+    
+    .redes{
+        position: relative;
+        top:200px;
+        left: 5px;
+    }
+
+    .lista-menu{
+        height: 150px;
+    }
+
+    .telefono{
+        width: 40vw;
+        position: relative;
+        right: 15vw;
+    }
+
+    .section{
+        float: left;
+        width: 85%;
+        height: 72vw;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    article{
+        font-size:1.5vw;
+    }
+
+    section h3{
+        font-size: 1.8vw;
+    }
+
+    .sofa1{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .sofa2{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .footer-sec1{
+        position: relative;
+        bottom: 30px;
+    }
+
+    #aside{
+        display: flex;
+        float: left;
+        width: 99%;
+        height: 20vw;
+        margin-top: 0px;
+    }
+
+    .interiores{
+        width: 225px;
+        margin: 10px;
+        
+    }   
+
+    .el-mueble{
+        width: 225px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .mi-casa{
+        width: 225px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #footer-principal{        
+        height: 120px;
+        width: 100%;
+    }
+
+    .horario{
+        width: 50%;
+        height: 100px;
+        position: relative;
+        left: 50px;
+        bottom: 10px;
+    }
+
+    .contenedorfooter{
+
+        width: 98%;
+        height: 200px;
+        margin: 20px;
+    }
+
+    .contactofooter{
+        position: relative;
+        bottom: 190px;
+        left: 10px;
+        width: 300px;
+    } 
+
+    .email{
+        position: relative;
+        bottom: 110px;
+        left: 10px;
+        width: 95%;
+    }
+
+    .email-image{
+        position: relative;
+        bottom: 110px;
+    }
+
+
+    .copyright{
+        position: relative;
+        left: 100px;
+        bottom: 230px;
+    }    
+}
+
+   
