@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+   
+    <head>
+        <meta charset="UTF-8"> <!-- con esto indicamos la codificación de caracteres al navegador-->
+        <meta name = "viewport" content="width=device-width, initialzscale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> ESTE ES EL TITULO</title>
+        <!-- ESTO ES UN COMENTARIO -->
+
+        <link rel="stylesheet" href="CSS/arizona.css">
+
+    </head>
+    <body>
+        
+         <div class="contenedor">
+            <header>
+            
+                <div class="logo">
+                <img src="/HEADER/LOGO.png" class="logo-img">
+                </div>
+    
+                <div class="contenedor-derecho">
+    
+                    <div class="redes">
+                        <img src="/HEADER/instagram.png" class="redes">
+                        <img src="/HEADER/facebook.png" class="redes">
+                    </div>
+    
+                    <div class="telefono">
+                    
+                        <img src="HEADER/whatsapp.png" class="contacto">
+                        <h2 Class="tlf">Teléfono: 91431 97 96</h2>
+                    </div>
+                </div>        
+                
+                
+            </header>
+    
+            <nav>
+                <ul class="lista-menu">
+    
+                   <li><a href="#" class="menu">Inicio</a></li>
+                    
+                    <li><a href="" class="menu">Noticias</a></li>
+                    
+                    <li><a href="/quienes.html" class="menu">Quiénes somos</a></li>
+                    
+                    <li><a href="" class="menu">Publicaciones</a></li>
+                    
+                    <li><a href="/productos.html" class="menu">Productos</a>
+           
+                        <ul class="submenu-productos">
+                            <li><a href="/fijos.html">Sofas fijos</a>
+                                <ul class="submenu-fijos">
+                                    <li><a href="/Arizona.html">Arizona</a></li>
+                                    <li><a href="/Dallas.html">Dallas</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li><a href="/Deslizantes.html">Sofas deslizantes</a>
+                                <ul class="submenu-deslizantes">
+                                    <li> <a href="/Padua.html">Padua</a></li>
+                                    <li><a href="/Evelin.html">Evelin</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+    
+                    </li> 
+           
+                    <li><a href="" class="menu">Localizacion</a></li>
+                    
+                    <li><a href="/Contacto.html" class="menu">Contacto</a></li> 
+    
+                </ul>
+            </nav>  
+        
+
+                    
+                    <h1>ARIZONA</h1>
+
+                    <!-- Creamos una section con las categorías de productos-->
+                    <section class = "product_table">
+                        <a href="#image1"><img src="img\Sofas fijos\Arizona/portadaarizona.jpg"></a>
+                        <a href="#image2"><img src="img\Sofas fijos\Arizona/2.jpg"></a>
+                        <a href="#image3"><img src="img\Sofas fijos\Arizona/3.jpg"></a>
+                        <a href="#image4"><img src="img\Sofas fijos\Arizona/4.jpg"></a>
+                        <a href="#image5"><img src="img\Sofas fijos\Arizona/5.jpg"></a>
+                        <br>
+                    </section>
+                    
+                    <!-- Creamos las redireccionas para cuando abramos una imagen-->
+                    <article class="light-box" id="image1">
+                        <a href="#image5" class="next"> <img src="img/arrow-left.png"></a>
+                        <img src="img\Sofas fijos\Arizona/portadaarizona.jpg">
+                        <a href="#image2" class="next"><img src="img/arrow-right.png"></a>
+                        <a href="" class="close">X</a>
+                    </article>
+
+                    <article class="light-box" id="image2">
+                        <a href="#image1" class="next"> <img src="img/arrow-left.png"></a>
+                        <img src="img\Sofas fijos\Arizona/2.jpg">
+                        <a href="#image3" class="next"><img src="img/arrow-right.png"></a>
+                        <a href="" class="close">X</a>
+                    </article>
+
+                    <article class="light-box" id="image3">
+                        <a href="#image2" class="next"> <img src="img/arrow-left.png"></a>
+                        <img src="img\Sofas fijos\Arizona/3.jpg">
+                        <a href="#image4" class="next"><img src="img/arrow-right.png"></a>
+                        <a href="" class="close">X</a>
+                    </article>
+
+                    <article class="light-box" id="image4">
+                        <a href="#image3" class="next"> <img src="img/arrow-left.png"></a>
+                        <img src="img\Sofas fijos\Arizona/4.jpg">
+                        <a href="#image5" class="next"><img src="img/arrow-right.png"></a>
+                        <a href="" class="close">X</a>
+                    </article>
+
+                    <article class="light-box" id="image5">
+                        <a href="#image4" class="next"> <img src="img/arrow-left.png"></a>
+                        <img src="img\Sofas fijos\Arizona/5.jpg">
+                        <a href="#image1" class="next"><img src="img/arrow-right.png"></a>
+                        <a href="" class="close">X</a>
+                    </article>
+
+                    <h2>Medidas</h2>
+                    <!-- Creamos una tabla con las medidas y la centramos posteriormente con css-->
+                    <table class="tabla">
+                        <tr>
+                            <td class="medidas">
+                                <a href="#medidasimg"><img src="img\Sofas fijos\Arizona/medidas-arizona.jpg"></a></td>
+                        </tr>
+                    </table>
+
+                    <h2>Telas</h2>
+                    <!-- Creamos la tabla con las telas-->
+                    <table class="tabla2">
+                      <td class="telas">
+                         <a href="#telasimg1"><img src="/img/Sofas fijos/Dallas/tela1.jpg"></a>
+                      </td>
+                      <td class="telas">
+                         <a href="#telasimg2"><img src="/img/Sofas fijos/Dallas/tela2.jpg"></a>
+                      </td>
+                       <td class="telas">
+                         <a href="#telasimg3"><img src="/img/Sofas fijos/Dallas/tela3.jpg"></a>
+                      </td>
+                      </table>
+
+                    <article class="light-box" id="telasimg1">
+                        <a href="#telasimg3" class="next"><img src="img/arrow-left.png"></a>
+                        <img src="img/Sofas fijos/Dallas/tela1.jpg">
+                        <a href="#telasimg2" class="next"><img src="img/arrow-right.png"></a>
+                        <a href="" class="close">X</a>
+                    </article>
+
+                    <article class="light-box" id="telasimg2">
+                        <a href="#telasimg1" class="next"><img src="img/arrow-left.png"></a>
+                        <img src="img/Sofas fijos/Dallas/tela2.jpg">
+                        <a href="#telasimg3" class="next"><img src="img/arrow-right.png"></a>
+                        <a href="" class="close">X</a>
+                    </article>
+
+                    <article class="light-box" id="telasimg3">
+                        <a href="#telasimg2" class="next"><img src="img/arrow-left.png"></a>
+                        <img src="img/Sofas fijos/Dallas/tela3.jpg">
+                        <a href="#telasimg1" class="next"><img src="img/arrow-right.png"></a>
+                        <a href="" class="close">X</a>
+                    </article>
+
+                    <article class="light-box" id="medidasimg">
+                        <img src="/Recuimgrsos/Sofas fijos/Dallas/medidas_dalas.jpg">
+                        <a href="" class="close">X</a>
+                    </article>
+
+                </td>
+            </tr>
+        </table>
+        <!-- FOOTER -->
+        <footer id="footer-principal">
+            
+            <div class="horario">
+
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Horario:</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>Lunes a Jueves</td>
+                            <td>Viernes</td>
+                        </tr>
+                        <tr>
+                            <td>Mañanas</td>
+                            <td>9:00 a 14:00</td>
+                            <td>9:00 a 14:00</td>
+                        </tr>
+                        <tr>
+                            <td>Tardes</td>
+                            <td> 16:00 a 19:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+                <div class="contenedorfooter">
+
+                    <div class="menufooter">
+
+                        <a href="#">Preguntas frecuentes</a>
+                        <a href="#">Ayuda en línea</a>
+                        <a href="#">Manuales</a>                      
+                        <a href="#">Garantía</a>                      
+                        
+                    </div>
+
+                    <div class="contactofooter">
+                            <img src="/footer/whatsapp.png" class="watsap">
+                            <p>914 31 97 96</p>
+                    </div>  
+
+                    <div class="email">
+                            <img src="/footer/email.png" class="email-image">
+                            <p class="email">contacto@divanodilusso.es</p>                            
+                    </div> 
+                    
+                    <div class="copyright">
+                        <p>© Divano di Lusso</p>
+                    </div> 
+                  
+                </div>                  
+                
+         </footer>
+        </div>
+
+    </body>
+    </html>
