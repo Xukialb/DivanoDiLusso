@@ -4,10 +4,6 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     font-size: 20px;
-    ont-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    text-align: justify;
-    border: solid #867e66;
     }
 
 /*HEADER CON LA IMAGEN DE FONDO*/
@@ -154,8 +150,6 @@ nav a:hover {
 .submenu-productos li a{
     display:block;
     padding: 15px;
-    
-
 }
 
 /*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
@@ -180,7 +174,6 @@ nav a:hover {
     con el que aparece el submenú cuando ponemos el ratón por encima*/
     visibility:hidden;
     opacity: 0;
-
     transition: opacity 0.55s;
 }
 
@@ -188,8 +181,6 @@ nav a:hover {
 .submenu-fijos li a{
     display:block;
     padding: 15px;
-    
-
 }
 
 /*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
@@ -213,7 +204,6 @@ nav a:hover {
     con el que aparece el submenú cuando ponemos el ratón por encima*/
     visibility:hidden;
     opacity: 0;
-
     transition: opacity 0.55s;
 }
 
@@ -325,3 +315,4 @@ img.peq{
             margin-left: auto;
             margin-right: auto;
         }
+    }

@@ -13,7 +13,7 @@ h2{
     }
 
 #contenedor{
-    width: 100%;
+    width: 50%;
     margin:auto;
     padding: 5px;
     border: solid #867e66;
@@ -54,7 +54,8 @@ header{
     background-size:cover;
     display:flex;
     width: 100%;
-    
+    height: 700px;
+    flex-wrap: wrap;      
     /*AL TENER 2 CONTENEDORES DENTRO DEL HEADER, USAMOS BETWEEN PARA QUE MANDE A CADA CONTENEDOR A UN EXTREMO DIFERENTE DEL HEADER, ESTO SE APLICA CON "DISPLAY:FLEX"*/
     justify-content:space-between;
     
@@ -100,7 +101,7 @@ header{
 /*CONTENEDOR CON EL LOGOTIPO DE LA EMPRESA*/
 .logo{
     display:flex;
-    width:70%;
+    width:50%;
     align-items:center;
     justify-content:center;
     
@@ -108,7 +109,7 @@ header{
 
 .logo-img{
     display:flex;
-    height:700px;
+    height:400px;
     /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color de la imagen con la propiedad filter*/
     filter: brightness(0) invert(1);
     }
@@ -256,8 +257,6 @@ nav a:hover {
 .submenu-deslizantes li a{
     display:block;
     padding: 15px;
-    
-
 }
 
 /*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
@@ -267,12 +266,11 @@ nav a:hover {
 }
 
 #footer-principal {
-    border: 1px solid #867e66;
-    height: 280px;
+    background-image: url( ../HEADER/footer.jpg);
+    background-size: cover;
+    height: 180px;
     text-align: center;
-    background: #FFF;
     margin: 10px;
-    background-color: #867e66;
     color: #fcfaf6;
 }
 
@@ -308,18 +306,12 @@ img.peq{
     clear:both;
     margin: 10px;
     padding: 10px;
-    font-weight: bold;
     justify-content: center;
-    align-items: center;
-    }
-
-.footer{
-    padding-top: 5px;
     }
 
 /**Diseño responsivo**/
 
-@media screen and (min-width: 701px)and (max-width: 1024px){
+@media screen and (min-width: 701px)and (max-width: 1280px){
     width: 50%;
     margin: 10px;
     }
@@ -331,6 +323,9 @@ img.peq{
         margin-left: auto;
         margin-right: auto;
     }
+
+
+
 
     footer{
         width: 250px;
