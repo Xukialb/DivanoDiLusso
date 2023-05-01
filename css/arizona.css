@@ -430,7 +430,7 @@ h1 {
 #footer-principal{
     display:flex;
     color:white;
-    background-image:url("/HEADER/footer.jpg");
+    background-image:url("../HEADER/footer.jpg");
     background-size:cover;
     height:300px;    
 }

@@ -10,7 +10,7 @@
 /*HEADER CON LA IMAGEN DE FONDO*/
 header{
     background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
-    url("/HEADER/otro.jpg");
+    url("../HEADER/otro.jpg");
     background-size:cover;
 
     display:flex;
@@ -430,7 +430,7 @@ h1 {
 #footer-principal{
     display:flex;
     color:white;
-    background-image:url("/HEADER/footer.jpg");
+    background-image:url("../HEADER/footer.jpg");
     background-size:cover;
     height:300px;    
 }
