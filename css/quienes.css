@@ -272,8 +272,8 @@
     float: left;
     width: 60%;
     margin:15px 10px 5px 10px;
+}
 
-<<<<<<< HEAD
 #footer-principal{
     clear: both;
     background-image: url( ../HEADER/footer.jpg);
@@ -285,16 +285,6 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     font-size: 20px;
-=======
-}
-
- #footer-principal{
-    display:flex;
-    color:white;
-    background-image:url("/HEADER/footer.jpg");
-    background-size:cover;
-    height:350px;    
->>>>>>> kyty
 }
 
 footer a{
@@ -303,27 +293,16 @@ footer a{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-<<<<<<< HEAD
 footer h3{
     font-size: 15;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #fcfaf6;    
-=======
-
-.tabla{    
-    height:75%;
-    width:100%;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:white;
->>>>>>> kyty
 }
 
 table th{
     padding: 10px;
 }
 
-<<<<<<< HEAD
 .redes-sociales{
     margin-top: 10px;
     width: 25%;
@@ -336,27 +315,6 @@ img.peq{
 .redes-sociales nav a{
     margin: 10px;
 }
-=======
-
-.contenedorfooter{
-    display:flex;
-    width:60%;
-    align-items:left;
-    justify-content:space-between;
-    flex-direction: column;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.contactofooter{
-    display:flex;
-    text-align:left;
-    align-items:center;
-    margin-bottom: 10px;
-    height:30px; 
-}
-
->>>>>>> kyty
 
 .t{
     width: 100%;
@@ -366,7 +324,6 @@ img.peq{
 }
        
 
-<<<<<<< HEAD
 .copyright{
     clear:both;
     margin: 10px;
@@ -379,59 +336,6 @@ img.peq{
         width: 100%;
       
     }
-=======
-
-
-.menufooter{
-    display:flex;
-    padding-left:25px;
-    
-    height:180px;
-    align-items:center;
-    justify-content:center;    
-}
-
-.menufooter a{
-    margin-right: 40px;
-}
-
-.tablamenu{
-    color: white;
-    text-align:center;
-    height:70%;
-    width:100%;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    
-}
-.email{
-    
-    display:flex;
-    align-items:center;
-    height:30px;
-    padding-bottom:5px;
-
-}
-
-.email p{
-    padding-left:10px;
-}
-
-.email img{
-    height:30px;
-    filter:brightness(0) invert(1);
-}
-.watsap{
-    filter:brightness(0) invert(1);
-    height:35px;
-    
-}
-
-.copyright{
-    text-align:left;
-    padding-left:20px;
->>>>>>> kyty
 }
 
 /*TEXTOS SUELTOS DEL BODY*/
