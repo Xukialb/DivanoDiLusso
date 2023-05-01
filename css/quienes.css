@@ -274,7 +274,11 @@
     margin:15px 10px 5px 10px;
 }
 
+<<<<<<< HEAD
  #footer-principal{
+=======
+#footer-principal{
+>>>>>>> 6f6695dbf8ac915b3e70a11d7755d76d538a9ab6
     clear: both;
     background-image: url( ../HEADER/footer.jpg);
     background-size: cover;
@@ -303,7 +307,6 @@ table th{
     padding: 10px;
 }
 
-<<<<<<< HEAD
 .redes-sociales{
     margin-top: 10px;
     width: 25%;
@@ -316,6 +319,7 @@ img.peq{
 .redes-sociales nav a{
     margin: 10px;
 }
+<<<<<<< HEAD
 =======
 
 .contenedorfooter{
@@ -336,6 +340,8 @@ img.peq{
     height:30px; 
 }
 
+=======
+>>>>>>> 6f6695dbf8ac915b3e70a11d7755d76d538a9ab6
 
 .t{
     width: 100%;
@@ -357,59 +363,6 @@ img.peq{
         width: 100%;
       
     }
-=======
-
-
-.menufooter{
-    display:flex;
-    padding-left:25px;
-    
-    height:180px;
-    align-items:center;
-    justify-content:center;    
-}
-
-.menufooter a{
-    margin-right: 40px;
-}
-
-.tablamenu{
-    color: white;
-    text-align:center;
-    height:70%;
-    width:100%;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    
-}
-.email{
-    
-    display:flex;
-    align-items:center;
-    height:30px;
-    padding-bottom:5px;
-
-}
-
-.email p{
-    padding-left:10px;
-}
-
-.email img{
-    height:30px;
-    filter:brightness(0) invert(1);
-}
-.watsap{
-    filter:brightness(0) invert(1);
-    height:35px;
-    
-}
-
-.copyright{
-    text-align:left;
-    padding-left:20px;
->>>>>>> kyty
 }
 
 /*TEXTOS SUELTOS DEL BODY*/

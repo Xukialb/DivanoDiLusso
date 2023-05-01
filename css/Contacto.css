@@ -49,7 +49,7 @@ input[type="submit"]{
     color: #fcfaf6;
 }
 
-/*HEADER CON LA IMAGEN DE FONDO*/
+/*Header con la imagen de fondo*/
 header{
     background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
     url("../HEADER/otro.jpg");
@@ -58,12 +58,13 @@ header{
     width: 100%;
     height: 700px;
     flex-wrap: wrap;      
-    /*AL TENER 2 CONTENEDORES DENTRO DEL HEADER, USAMOS BETWEEN PARA QUE MANDE A CADA CONTENEDOR A UN EXTREMO DIFERENTE DEL HEADER, ESTO SE APLICA CON "DISPLAY:FLEX"*/
+    /*AL TENER 2 CONTENEDORES DENTRO DEL HEADER, USAMOS BETWEEN PARA QUE MANDE A CADA CONTENEDOR A UN 
+    EXTREMO DIFERENTE DEL HEADER, ESTO SE APLICA CON "DISPLAY:FLEX"*/
     justify-content:space-between;
     
 }
 
-/*CONTENEDOR CON ICONOS DE REDES + TELEFONO DE CONTACTO*/
+/**Contenedor derecho con íconos de redes y teléfono de contacto**/
 .contenedor-derecho{
     display:flex ;
     justify-content:space-between;
@@ -103,10 +104,8 @@ Con border radius, redondeamos el borde de la caja. **/
     filter: brightness(0) invert(1);
     height:40px;
 }
-/*-----------------------------------*/
-/*-----------------------------------*/
 
-/*CONTENEDOR CON EL LOGOTIPO DE LA EMPRESA*/
+/*Contenedor con el logo de la empresa*/
 
 /**Definimos el tamaño y la alineacion de la caja que contendrá el logo de la empresa**/
 .logo{
