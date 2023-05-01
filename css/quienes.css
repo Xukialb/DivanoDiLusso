@@ -11,17 +11,14 @@
         background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
         url("/header/otro.jpg");
         background-size:cover;
-    
         display:flex;
         width:100%;
         min-height:800px;
-    
-        /*AL TENER 2 CONTENEDORES DENTRO DEL HEADER, USAMOS BETWEEN PARA QUE MANDE A CADA CONTENEDOR A UN EXTREMO DIFERENTE DEL HEADER, ESTO SE APLICA CON "DISPLAY:FLEX"*/
-        justify-content:space-between;
+       justify-content:space-between;
         
     }
     
-    /*CONTENEDOR CON ICONOS DE REDES + TELEFONO DE CONTACTO*/
+    
     .contenedor-derecho{
         display:flex ;
         justify-content:space-between;
@@ -54,10 +51,7 @@
         filter: brightness(0) invert(1);
         height:40px;
     }
-    /*-----------------------------------*/
-    /*-----------------------------------*/
-    
-    /*CONTENEDOR CON EL LOGOTIPO DE LA EMPRESA*/
+   
     .logo{
         display:flex;
         width:100%;
@@ -71,21 +65,15 @@
     .logo-img{
         display:flex;
         height:500px;
-        /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color de la imagen con la propiedad filter*/
         filter: brightness(0) invert(1);
-        /*Le metemos mucho padding a la izquierda para tratar de centrar la imagen del logo con respecto al header ya que no podemos montar este contenedor, sobre el que tenemos a la derecha con redes y contacto*/
-    
-        /*Esto habrá que modificarlo con media querys*/
         padding-left:350px;
         
     }
     
     
     
-    /*Barra de navegación o de menú*/
     nav{
-        /*background-color:rgb(148, 139, 99);
-        */
+    
         background:transparent;
         margin-top:-80px;
         display:flex;
@@ -97,21 +85,21 @@
        
     }
     
-    /*Lista de menu*/
+
     nav ul{
         list-style: none;
     
     }
     
     
-    /*Configuración de todos "a" que hay en el nav*/
+
     nav a{
         padding-right:20px;
         color:white;
         text-decoration:none;
         font-size:24px;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        /*Con el transition + el border-obttom, vamos a conseguir que al aplicar un hover sobre los "a" nos aparezca la barra inferior debajo de cada texto del menú*/
+    
         transition: all .55s ease;
         border-bottom: 2px solid transparent;
     }
@@ -121,7 +109,7 @@
     }
     
     
-    /*Lista principal del menú*/
+   
     .lista-menu > li {
         position: relative;
         display: inline-block;
@@ -136,7 +124,7 @@
         
     }
     
-    /* Menú con los tipos de productos*/
+   
     .submenu-productos{
         position:absolute;
         background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
@@ -145,8 +133,6 @@
         text-align:center;
         padding-right:25px;
         margin-top:25px;
-        /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
-        con el que aparece el submenú cuando ponemos el ratón por encima*/
         visibility:hidden;
         opacity: 0;
     
@@ -162,7 +148,7 @@
     
     }
     
-    /*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+    
     .lista-menu li:hover .submenu-productos{
         visibility: visible;
         opacity: 1;
@@ -170,8 +156,6 @@
     }
     
     
-    /*SUBMENU FIJOS*/
-    /* Menú con los tipos de productos*/
     .submenu-fijos{
         position:absolute;
         background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
@@ -181,8 +165,6 @@
         padding-right:25px;
         margin-left:250px;
         margin-top: -50px;
-        /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
-        con el que aparece el submenú cuando ponemos el ratón por encima*/
         visibility:hidden;
         opacity: 0;
         z-index:1008;
@@ -197,7 +179,7 @@
     
     }
     
-    /*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+   
     .submenu-productos li:hover .submenu-fijos{
         visibility: visible;
         opacity: 1;
@@ -205,9 +187,7 @@
     }
     
     
-    
-    /*SUBMENU DESLIZANTES*/
-    /* Menú con los tipos de productos*/
+   
     .submenu-deslizantes{
         position:absolute;
         background:linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65));
@@ -217,12 +197,9 @@
         padding-right:25px;
         margin-left:250px;
         margin-top: -50px;
-        /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
-        con el que aparece el submenú cuando ponemos el ratón por encima*/
         visibility:hidden;
         opacity: 0;
-    
-        transition: opacity 0.55s;
+       transition: opacity 0.55s;
     }
     
     
@@ -233,12 +210,14 @@
     
     }
     
-    /*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+
     .submenu-productos li:hover .submenu-deslizantes{
         visibility: visible;
         opacity: 1;
     
     }
+
+
 
 .contenido{
    width: 100%;
@@ -246,7 +225,7 @@
    margin-top: 15px;
    border: 1px solid #867e66;
    height: 110w;
-   margin-top: 65px;
+   margin-top: 45px;
    margin-bottom: 20px;
   
 }
@@ -263,6 +242,7 @@
 
 }
 
+
 .figura img{
     
     padding:10px;
@@ -271,7 +251,7 @@
 .figura{
     float: left;
     width: 60%;
-    margin:15px 10px 5px 10px;
+    margin:15px 0px 5px 10px;
 }
 
  #footer-principal{
@@ -303,7 +283,6 @@ table th{
     padding: 10px;
 }
 
-<<<<<<< HEAD
 .redes-sociales{
     margin-top: 10px;
     width: 25%;
@@ -316,7 +295,6 @@ img.peq{
 .redes-sociales nav a{
     margin: 10px;
 }
-=======
 
 .contenedorfooter{
     display:flex;
@@ -351,68 +329,6 @@ img.peq{
     padding: 10px;
     justify-content: center;
     }
-/*
-@media (max-width: 1300px) {
-    section{
-        width: 100%;
-      
-    }
-=======
-
-
-.menufooter{
-    display:flex;
-    padding-left:25px;
-    
-    height:180px;
-    align-items:center;
-    justify-content:center;    
-}
-
-.menufooter a{
-    margin-right: 40px;
-}
-
-.tablamenu{
-    color: white;
-    text-align:center;
-    height:70%;
-    width:100%;
-    font-size:22px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    
-}
-.email{
-    
-    display:flex;
-    align-items:center;
-    height:30px;
-    padding-bottom:5px;
-
-}
-
-.email p{
-    padding-left:10px;
-}
-
-.email img{
-    height:30px;
-    filter:brightness(0) invert(1);
-}
-.watsap{
-    filter:brightness(0) invert(1);
-    height:35px;
-    
-}
-
-.copyright{
-    text-align:left;
-    padding-left:20px;
->>>>>>> kyty
-}
-
-/*TEXTOS SUELTOS DEL BODY*/
 
 .tlf{
     background-color:transparent;
@@ -424,3 +340,205 @@ h2{
 }
 
 
+/*Dimensiones para max-width de 1300*/
+@media (max-width: 1300px){
+    .pagina{
+        width: 97vw;
+    }
+
+    .logo{
+        display:relative;
+       width:50vw;
+    }
+    .logo-img{
+        width: 100vw;
+    }
+    .contenedor-derecho{
+        display:none;
+    }
+   
+    nav{
+        margin-top:0px;
+        display:block;
+        text-align:center;
+        align-items:center;
+        margin-left:350px;
+        width:40%;
+        height:100%;
+       
+    }
+
+    nav  a{
+        color:black;
+        font-size:28px;
+    }
+
+    nav a:hover {
+        border-bottom: 2px solid black;*/
+    }  
+    .texto{
+       
+         padding-left: 10px;
+         padding-right: 15px;
+         text-align: justify ;
+        
+     }
+     
+    
+.figura img{
+    
+    padding:10px;
+    width: 100%;
+}
+.figura{
+    float: left;
+    width: 68%;
+    margin:20px 8px 5px 10px;
+    
+   
+}
+}
+/*Dimensiones de iPad Air*/
+@media (max-width: 820px) and (orientation :portrait){
+    .pagina{
+        width: 97vw;
+    }
+    .logo{
+        display:relative;
+       width:50vw;
+    }
+    .logo-img{
+        width: 100vw;
+    }
+    .contenedor-derecho{
+        display:none;
+    }
+    nav{
+        margin-left:230px;
+       
+        }
+        .figura img{
+    
+            padding:10px;
+            width: 100%;
+        }
+        .figura{
+            float: left;
+            width: 68%;
+            margin:20px 8px 5px 10px;
+            
+}
+}
+@media (max-width: 1180px) and (orientation :landscape){
+    .pagina{
+        width: 97vw;
+    }
+    .logo{
+        display:relative;
+       width:50vw;
+    }
+    .logo-img{
+        width: 100vw;
+    }
+    .contenedor-derecho{
+        display:none;
+    }
+    .figura img{
+    
+        padding:10px;
+        width: 100%;
+    }
+    .figura{
+        float: left;
+        width: 60%;
+        margin:20px 8px 5px 10px;
+}
+}
+
+/*Dimensiones SamsungGalaxy A51/71*/
+@media (max-width: 412px) and (orientation :portrait){
+   
+    .pagina{
+        width:97vw;
+        justify-content:center;
+    }
+    header{
+        width:97vw;
+        /*position: relative;*/
+        height: 250px;
+    }
+
+    .logo img{
+        width:150%;
+        height:300px;
+    }
+    .logo-img{  
+        display: flex;
+        padding-left: 50px;
+        width: 70%;
+        }
+
+    nav{
+        width: 60%;
+        font-size: xx-small;
+        position: relative;
+        text-align: center;
+        margin-left:70px
+       
+        }
+     .contenido{
+        width: 97vw;
+        font-size: 10px;
+     }
+    .contenedor-derecho{
+        display:none;
+    }
+   
+    #footer-principal{
+        width:97 vw;
+        display: block;
+        height: 400px;
+    } 
+/*Dimensiones SamsungGalaxy A51/71*/
+@media (max-width: 914px) and (orientation :landscape){
+    .pagina{
+        width: 97vw;
+        justify-content:center;
+        }
+        header{
+            width:50vw;
+            height: 250px;
+        }
+    
+        .logo img{
+            width:150%;
+            height:300px;
+        }
+        .logo-img{  
+            display: flex;
+            padding-left: 50px;
+            width: 70%;
+            }
+    
+        nav{
+            width: 60%;
+            font-size: xx-small;
+            position: relative;
+            text-align: center;
+            margin-left:70px
+           
+            }
+         .contenido{
+            font-size: 10px;
+         }
+        .contenedor-derecho{
+            display:none;
+        }
+       
+        #footer-principal{
+            display: block;
+            height: 400px;
+        } 
+
+}
+}
