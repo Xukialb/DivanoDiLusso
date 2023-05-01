@@ -1,0 +1,367 @@
+
+/*CONTENEDOR DE TODA LA PÁGINA, DONDE CONFIGURAMOS MARGENES Y ALINEACIONES */
+.contenedor{
+    display:block;
+    width:70%;
+    margin: auto;
+}
+
+/*HEADER CON LA IMAGEN DE FONDO*/
+header{
+    background:linear-gradient(rgba(5, 7, 12, 0.61), rgba(5, 7, 12, 0.61)),
+    url("otro.jpg");
+    background-size:cover;
+
+    display:flex;
+    width:100%;
+    min-height:800px;
+
+    /*AL TENER 2 CONTENEDORES DENTRO DEL HEADER, USAMOS BETWEEN PARA QUE MANDE A CADA CONTENEDOR A UN EXTREMO DIFERENTE DEL HEADER, ESTO SE APLICA CON "DISPLAY:FLEX"*/
+    justify-content:space-between;
+    
+}
+
+/*CONTENEDOR CON ICONOS DE REDES + TELEFONO DE CONTACTO*/
+.contenedor-derecho{
+    display:flex ;
+    justify-content:space-between;
+    flex-direction:column;
+    width:30%;
+}
+
+.redes {
+    display:flex;
+    justify-content:right;
+    padding-right:10px;
+    height: 40px;
+    padding-top:10px;
+}
+
+.thea{
+
+}
+
+.telefono{
+    display:flex;
+    align-items:center;
+    padding-right:5px;
+    padding-bottom:90px;
+    justify-content:center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    border-radius:8px;
+    margin-right:10px;
+}
+
+.telefono img{
+    padding-right:5px;
+    filter: brightness(0) invert(1);
+    height:40px;
+}
+/*-----------------------------------*/
+/*-----------------------------------*/
+
+/*CONTENEDOR CON EL LOGOTIPO DE LA EMPRESA*/
+.logo{
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo-img{
+    display:flex;
+    height:500px;
+    /*Como la imagen en PNG es de color negro, al tener fondo transparente podemos cambiar el color de la imagen con la propiedad filter*/
+    filter: brightness(0) invert(1);
+    /*Le metemos mucho padding a la izquierda para tratar de centrar la imagen del logo con respecto al header ya que no podemos montar este contenedor, sobre el que tenemos a la derecha con redes y contacto*/
+
+    /*Esto habrá que modificarlo con media querys*/
+    padding-left:350px;    
+}
+
+
+
+/*Barra de navegación o de menú*/
+nav{
+    /*background-color:rgb(148, 139, 99);
+    */
+    background:transparent;
+    margin-top:-80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:50px;
+}
+
+/*Lista de menu*/
+nav ul{
+    list-style: none;
+
+}
+
+nav h1{
+    justify-content:center;
+    padding-right:10px;
+    color:white;
+}
+
+
+
+/*Configuración de todos "a" que hay en el nav*/
+nav a{
+    padding-right:20px;
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*Con el transition + el border-obttom, vamos a conseguir que al aplicar un hover sobre los "a" nos aparezca la barra inferior debajo de cada texto del menú*/
+    transition: all .55s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+/*Lista principal del menú*/
+.lista-menu > li {
+    position: relative;
+    display: inline-block;
+    }
+
+.lista-menu > li > a{
+    display: block;
+    padding: 15px;   
+}
+
+/* Menú con los tipos de productos*/
+.submenu-productos{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    border-radius:8px;
+    width:150%;
+    text-align:center;
+    padding-right:25px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+    transition: opacity 0.55s;
+}
+
+
+.submenu-productos li a{
+    display:block;
+    padding: 15px;
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.lista-menu li:hover .submenu-productos{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*SUBMENU FIJOS*/
+/* Menú con los tipos de productos*/
+.submenu-fijos{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    border-radius:8px;
+    width:50%;
+    text-align:center;
+    padding-right:25px;
+    margin-left:250px;
+    margin-top: -50px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.55s;
+}
+
+
+.submenu-fijos li a{
+    display:block;
+    padding: 15px;
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.submenu-productos li:hover .submenu-fijos{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/*SUBMENU DESLIZANTES*/
+/* Menú con los tipos de productos*/
+.submenu-deslizantes{
+    position:absolute;
+    background:linear-gradient(rgba(5, 7, 12, 0.30), rgba(5, 7, 12, 0.30));
+    border-radius:8px;
+    width:50%;
+    text-align:center;
+    padding-right:25px;
+    margin-left:250px;
+    margin-top: -50px;
+    /*Tenemos que ocultar el submenú para hacerlo aparecer mediante el hover, portanto usabmos la propiedad visibility:hidden para ocultarlo y le damos opacidad 0, la opacidad la usamos para generar el efecto de transición 
+    con el que aparece el submenú cuando ponemos el ratón por encima*/
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.55s;
+}
+
+
+.submenu-deslizantes li a{
+    display:block;
+    padding: 15px;
+    
+
+}
+
+/*Con este hover estamos diciendo que a todos los elementos "li" del submenú los haga visibles dándoles opacidad*/
+.submenu-productos li:hover .submenu-deslizantes{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.contenedor2{    
+    width:100%;
+    display:flex;
+    height:800px;
+    padding-top:10px;
+}
+
+
+section{
+    padding-top:10px;
+    background-color:green;
+    width:80%;
+    
+}
+
+aside{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:orange;
+    width:20%;
+}
+
+footer{
+    
+    display:flex;
+    color:white;
+    background-color:black;
+    background-image:url("footer.jpg");
+    background-size:cover;
+    height:250px;
+}
+
+
+.tabla{
+    
+    height:70%;
+    width:100%;
+    font-size:22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.horario{
+    align-items:center;
+    padding-top:20px;
+    
+    width:40%;
+    text-align:center;
+    background:red;
+}
+
+
+.contenedorfooter{
+    display:flex;
+    
+    width:60%;
+    align-items:left;
+    justify-content:space-between;
+    flex-direction: column;
+    font-size:22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contactofooter{
+    display:flex;
+    text-align:left;
+    align-items:center;
+    background-color:aqua;
+    height:30px;
+   
+}
+
+.contactofooter p{
+    padding-left:5px;
+    
+    
+}
+.menufooter{
+    display:flex;
+    padding-left:25px;
+    
+    height:180px;
+    align-items:center;
+    justify-content:center;
+    background-color:purple;
+    
+}
+
+.tablamenu{
+    text-align:center;
+    height:70%;
+    width:100%;
+    font-size:22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:orange;
+    
+}
+.email{
+    
+    display:flex;
+    align-items:center;
+    height:30px;
+    padding-bottom:5px;
+    background-color:red;
+}
+
+.email p{
+    padding-left:10px;
+}
+
+.email img{
+    height:30px;
+    filter:brightness(0) invert(1);
+}
+.watsap{
+    filter:brightness(0) invert(1);
+    height:35px;
+    
+}
+
+
+
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction:column;
+    }
+}
